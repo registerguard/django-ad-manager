@@ -1,5 +1,7 @@
 import datetime
 
+from django import forms
+from django.core import urlresolvers
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -9,6 +11,9 @@ from ad_manager import managers
 
 # https://bitbucket.org/codekoala/django-articles/src/f1dedb2723cbe66e1c849e1513eeba61dd4f59ec/articles/models.py?at=default
 # https://github.com/praekelt/django-category
+# https://bitbucket.org/chris1610/satchmo/src/1730bf912bc1/satchmo/apps/product/models.py?at=default
+# http://thefekete.net/blog/sorting-hierarchical-categories-in-django/
+# https://docs.djangoproject.com/en/1.4/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display
 
 """
     Notes to (future) self:
@@ -17,6 +22,7 @@ from ad_manager import managers
     * Using slug fields for anything that shows in URI.
     * The db_index=True is set by default for SlugFields.
     * The permalink decorator is no longer recommended. You should use reverse() in the body of your get_absolute_url method instead.
+    * PEP8: For flowing long blocks of text (docstrings or comments), limiting the length to 72 characters is recommended.
 """
 
 #--------------------------------------------------------------------------
@@ -61,17 +67,265 @@ class Base(models.Model):
 #
 #--------------------------------------------------------------------------
 
-class Site(Base):
+class Target(Base):
     
     #----------------------------------
     # All database fields:
     #----------------------------------
     
+    # Hidden:
+    sort = models.IntegerField(default=0, editable=False,)
+    
     # Meta:
-    slug = models.SlugField(max_length=255, unique=True, help_text='Short descriptive unique name for use in urls.',)
+    slug     = models.SlugField(max_length=255, help_text=_(u'Short descriptive unique name for use in urls.'),)
     
     # Base:
-    name = models.CharField(_(u'name'), max_length=200, help_text=_(u'Short descriptive name for this site.'),)
+    name = models.CharField(_(u'name'), max_length=200, help_text=_(u'Short descriptive name for this target.'),)
+    
+    # Foreign keys:
+    parent = models.ForeignKey('self', null=True, blank=True, related_name='child')
+    
+    #----------------------------------
+    # Custom manager attributes:
+    #----------------------------------
+    
+    objects = managers.TargetManager()
+    
+    #----------------------------------
+    # Class Meta:
+    #----------------------------------
+    
+    class Meta:
+        
+        ordering = ['sort', 'name',]
+        unique_together = ('slug', 'parent',)
+    
+    #----------------------------------
+    # def __XXX__()
+    #----------------------------------
+    
+    def __unicode__(self):
+        
+        name_list = [target.name.upper() for target in self._recurse_for_parents(self)]
+        
+        name_list.append(self.name)
+        
+        return _(u'%s') % self.get_separator().join(name_list)
+    
+    #----------------------------------
+    # def save()
+    #----------------------------------
+    
+    def save(self, **kwargs):
+        
+        if self.id:
+            
+            if self.parent and self.parent_id == self.id:
+                raise forms.ValidationError(_(u'You may not save a target in itself!'))
+            
+            for p in self._recurse_for_parents(self):
+                
+                if self.id == p.id:
+                    raise forms.ValidationError(_(u'You may not save a target in itself!'))
+        
+        if not self.slug:
+            self.slug = slugify(self.name, instance=self)
+        
+        super(Target, self).save(**kwargs) # Call the "real" save()
+        
+        self._re_sort()
+    
+    #----------------------------------
+    # def get_absolute_url()
+    #----------------------------------
+    
+    def get_absolute_url(self):
+        
+        parents = self._recurse_for_parents(self)
+        
+        slug_list = [target.slug for target in parents]
+        
+        if slug_list:
+            slug_list = '/'.join(slug_list) + '/'
+        
+        else:
+            slug_list = ''
+        
+        return urlresolvers.reverse('ad_manager_target_detail', kwargs={'parent_slugs' : slug_list, 'slug' : self.slug})
+    
+    #----------------------------------
+    # Custom methods:
+    #----------------------------------
+    
+    def parents(self):
+        
+        return self._recurse_for_parents(self)
+    
+    #----------------------------------
+    
+    def children(self):
+        
+        return self.target_set.all().order_by('name')
+    
+    #----------------------------------
+    
+    def get_separator(self):
+        
+        return ' | '
+    
+    #----------------------------------
+    
+    def _recurse_for_parents(self, target_obj):
+        
+        p_list = []
+        
+        if target_obj.parent_id:
+            
+            p = target_obj.parent
+            p_list.append(p)
+            
+            if p != self:
+                
+                more = self._recurse_for_parents(p)
+                p_list.extend(more)
+        
+        if target_obj == self and p_list:
+            p_list.reverse()
+        
+        return p_list
+    
+    #----------------------------------
+    
+    def _parents_repr(self):
+        
+        """
+        Representation of targets.
+        """
+        
+        name_list = [target.name for target in self._recurse_for_parents(self)]
+        
+        return self.get_separator().join(name_list)
+        
+    _parents_repr.short_description = _(u'Target parents')
+    
+    #----------------------------------
+    
+    def get_url_name(self):
+        
+        """
+        Get all the absolute URLs and names for use in the site navigation.
+        """
+        
+        name_list = []
+        url_list = []
+        
+        for target in self._recurse_for_parents(self):
+            
+            name_list.append(target.name)
+            url_list.append(target.get_absolute_url())
+        
+        name_list.append(self.name)
+        
+        url_list.append(self.get_absolute_url())
+        
+        return zip(name_list, url_list)
+    
+    #----------------------------------
+    
+    def _flatten(self, L):
+        
+        """
+        Taken from a python newsgroup post.
+        """
+        
+        if type(L) != type([]): return [L]
+        
+        if L == []: return L
+        
+        return self._flatten(L[0]) + self._flatten(L[1:])
+    
+    #----------------------------------
+    
+    def _recurse_for_children(self, node):
+        
+        children = []
+        
+        children.append(node)
+        
+        for child in node.child.all():
+            
+            if child != self:
+                
+                children_list = self._recurse_for_children(child)
+                children.append(children_list)
+        
+        return children
+    
+    #----------------------------------
+    
+    def get_all_children(self, include_self=False):
+        
+        """
+        Gets a list of all of the children targets.
+        """
+        
+        children_list = self._recurse_for_children(self)
+        
+        if include_self:
+            ix = 0
+        else:
+            ix = 1
+        
+        flat_list = self._flatten(children_list[ix:])
+        
+        return flat_list
+    
+    #----------------------------------
+    
+    @classmethod
+    def _re_sort(cls):
+        
+        """
+        Grab all the targets, sort them by their full name and write their
+        index in the sorted list to the sort field.
+        It needs the @classmethod decorator so we don't get "AttributeError:
+        Manager isn't accessible via Category instances".
+        This classmethod is hooked into the save method.
+        Since we're making calls to the super's save method in both the save()
+        and re_sort() methods, we don't get a maximum recursion error.
+        """
+        
+        targets = sorted([(x.__unicode__().lower(), x) for x in cls.objects.all()]) # Can I use self.parents() here?
+        
+        for i in range(len(targets)):
+            
+            full_name, target = targets[i]
+            
+            target.sort = i
+            
+            super(Target, target).save() # Call the "real" save()
+    
+    #----------------------------------
+    
+    def uni_sort(self):
+        
+        return self.__unicode__()
+        
+    uni_sort.admin_order_field = 'sort'
+    uni_sort.short_description = _(u'name')
+
+class AdGroup(Base):
+    
+    #----------------------------------
+    # All database fields:
+    #----------------------------------
+    
+    # Base:
+    aug_id = models.IntegerField(_(u'ad unit group ID'),)
+    
+    # Foreign keys:
+    page_type = models.ForeignKey('PageType', blank=True, null=True,)
+    target    = models.ForeignKey('Target')
     
     #----------------------------------
     # Class Meta:
@@ -87,15 +341,7 @@ class Site(Base):
     
     def __unicode__(self):
         
-        return self.name
-    
-    #----------------------------------
-    # Custom methods:
-    #----------------------------------
-    
-    def get_absolute_url(self):
-        
-        return reverse('site_object_list', kwargs={'site_slug': self.slug})
+        return _(u'%s') % self.target
 
 class Ad(Base):
     
@@ -104,19 +350,16 @@ class Ad(Base):
     #----------------------------------
     
     # Base:
-    ad_id  = models.IntegerField(_(u'Ad id'), unique=True,)
-    status = models.ForeignKey('AdStatus', default='AdStatus.objects.default', help_text=_(u'Ads with non-"live" statuses will still be visible to super admins.'),)
+    ad_id = models.IntegerField(_(u'ad unit ID'), unique=True,)
     
     # Scheduling:
+    expiration_date = models.DateField(_(u'expiration date'), blank=True, null=True, help_text=_(u'Leave blank if the ad does not expire.'),)
     is_active       = models.BooleanField(_(u'active?'), default=True, blank=True, help_text=_(u'Disables/enables ad for everyone (including super admins).'),)
-    publish_date    = models.DateTimeField(_(u'publish date'), default=datetime.datetime.now, help_text=_(u'The date and time this ad shall appear online.'),)
-    expiration_date = models.DateTimeField(_(u'expiration date'), blank=True, null=True, help_text=_(u'Leave blank if the ad does not expire.'),)
+    publish_date    = models.DateField(_(u'publish date'), default=datetime.date.today, help_text=_(u'The date this ad shall appear online.'),)
     
     # Foreign keys:
-    ad_type   = models.ForeignKey('AdType',)
-    page_type = models.ForeignKey('PageType', blank=True, null=True,)
-    section   = models.ForeignKey('Section',)
-    site      = models.ForeignKey('Site',)
+    ad_group = models.ForeignKey('AdGroup',)
+    ad_type  = models.ForeignKey('AdType',)
     
     #----------------------------------
     # Custom manager attributes:
@@ -138,7 +381,7 @@ class Ad(Base):
     
     def __unicode__(self):
         
-        return _(u'%s | %s | %s') % (self.section, self.page_type, self.ad_type)
+        return _(u'%s | %s') % (self.ad_group, self.ad_type)
     
     #----------------------------------
     
@@ -150,78 +393,10 @@ class Ad(Base):
             
             # Mark the page as inactive if it's expired and still active:
             if self.expiration_date and self.expiration_date <= datetime.datetime.now() and self.is_active:
+                
                 self.is_active = False
+                
                 self.save()
-
-class Section(Base):
-    
-    #----------------------------------
-    # All database fields:
-    #----------------------------------
-    
-    # Meta:
-    slug = models.SlugField(max_length=255, unique=True, help_text='Short descriptive unique name for use in urls.',)
-    
-    # Base:
-    aug_id = models.IntegerField(_(u'AUG id'),)
-    name   = models.CharField(_(u'name'), max_length=200, help_text=_(u'Short descriptive name for this section.'),)
-    
-    # Foreign keys:
-    parent = models.ForeignKey('self', null=True, blank=True,)
-    
-    #----------------------------------
-    # Class Meta:
-    #----------------------------------
-    
-    class Meta:
-        
-        ordering = ('name',)
-        verbose_name = 'section'
-        verbose_name_plural = 'sections'
-    
-    #----------------------------------
-    # def __XXX__()
-    #----------------------------------
-    
-    def __unicode__(self):
-        
-        #return _(u'%s%s %s') % (self.get('name', ''), (' | ' if self.parent else ''), self.name)
-        
-        # Add " | " between fields with values:
-        #return _(u'%s') % ' | '.join(filter(None, (self.parent.name, self.name)))
-        return self.name
-    
-    #----------------------------------
-    # def save()
-    #----------------------------------
-    
-    def save(self, *args, **kwargs):
-        
-        # Raise on circular reference:
-        parent = self.parent
-        while parent is not None:
-            if parent == self:
-                raise RuntimeError, 'Circular references not allowed!'
-            parent = parent.parent
-        
-        super(Section, self).save(*args, **kwargs)
-    
-    #----------------------------------
-    # def get_absolute_url()
-    #----------------------------------
-    
-    def get_absolute_url(self):
-        
-        return reverse('section_object_list', kwargs={'section_slug': self.slug}) # Doc example: return reverse('people.views.details', args=[str(self.id)])
-    
-    #----------------------------------
-    # Custom methods:
-    #----------------------------------
-    
-    @property
-    def children(self):
-        
-        return self.category_set.all().order_by('name')
 
 class PageType(Base):
     
@@ -230,7 +405,7 @@ class PageType(Base):
     #----------------------------------
     
     # Meta:
-    slug = models.SlugField(max_length=255, unique=True, help_text='Short descriptive unique name for use in urls.',)
+    slug = models.SlugField(max_length=255, unique=True, help_text=_(u'Short descriptive unique name for use in urls.'),)
     
     # Base:
     name = models.CharField(_(u'name'), max_length=200, help_text=_(u'Short descriptive name for page type.'),)
@@ -249,7 +424,7 @@ class PageType(Base):
     
     def __unicode__(self):
         
-        return self.name
+        return _(u'%s') % self.name
     
     #----------------------------------
     # def get_absolute_url()
@@ -262,25 +437,16 @@ class PageType(Base):
 class AdType(Base):
     
     #----------------------------------
-    # Choices:
-    #----------------------------------
-    
-    IFRAME = 1
-    SCRIPT = 2
-    TAG_CHOICES = (
-        (IFRAME, _(u'<iframe>')),
-        (SCRIPT, _(u'<script>')),
-    )
-    
-    #----------------------------------
     # All database fields:
     #----------------------------------
     
     # Base:
-    name     = models.CharField(_(u'name'), max_length=200, help_text=_(u'Short descriptive name for this ad type.'),)
-    height   = models.IntegerField(_(u'height'),)
-    tag_type = models.IntegerField(_(u'tag type'), choices=TAG_CHOICES,)
-    width    = models.IntegerField(_(u'width'),)
+    height = models.IntegerField(_(u'height'),)
+    name   = models.CharField(_(u'name'), max_length=200, help_text=_(u'Short descriptive name for this ad type.'),)
+    width  = models.IntegerField(_(u'width'),)
+    
+    # Foreign keys:
+    tag_type = models.ForeignKey('TagType',)
     
     #----------------------------------
     # Class Meta:
@@ -289,7 +455,6 @@ class AdType(Base):
     class Meta:
         
         ordering = ('name',)
-        verbose_name = 'ad type'
     
     #----------------------------------
     # def __XXX__()
@@ -299,24 +464,14 @@ class AdType(Base):
         
         return _(u'%s | %s x %s') % (self.name, self.width, self.height)
 
-class AdStatus(Base):
+class TagType(Base):
     
     #----------------------------------
     # All database fields:
     #----------------------------------
     
-    # Meta:
-    is_live  = models.BooleanField(_(u'live?'), default=True, blank=True,)
-    ordering = models.IntegerField(_(u'ordering'), default=0,)
-    
     # Base:
-    name = models.CharField(_(u'name'), max_length=50,)
-    
-    #----------------------------------
-    # Custom manager attributes:
-    #----------------------------------
-    
-    objects = managers.AdStatusManager()
+    name = models.CharField(_(u'name'), max_length=200, help_text=_(u'Ad tag "type"; examples: &lt;iframe&gt;, &lt;script&gt;, &lt;img&gt;...'),)
     
     #----------------------------------
     # Class Meta:
@@ -324,8 +479,7 @@ class AdStatus(Base):
     
     class Meta:
         
-        ordering = ('ordering', 'name',)
-        verbose_name_plural = _(u'Ad statuses')
+        pass
     
     #----------------------------------
     # def __XXX__()
@@ -333,7 +487,4 @@ class AdStatus(Base):
     
     def __unicode__(self):
         
-        if self.is_live:
-            return u'%s (live)' % self.name
-        else:
-            return self.name
+        return _(u'%s') % self.name

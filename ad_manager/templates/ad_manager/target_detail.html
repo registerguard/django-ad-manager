@@ -1,0 +1,27 @@
+{% extends "ad_manager/base.html" %}
+
+{# https://bitbucket.org/nekstrom/satchmo/src/abaacbb7167fce75f204683491b2e027473a2b00/satchmo/apps/satchmo_store/shop/templatetags/satchmo_category.py?at=default #}
+{#{% load satchmo_category %}#}
+
+{% block body %}
+	
+	<ul>
+		{% for parent in target.parents %}<li><a href="{{ parent.get_absolute_url }}">{{ parent.name }}</a></li>{% endfor %}
+		<li>{{ target.name }}</li>
+	</ul>
+	
+	<hr>
+	
+	<h3>{{ target.name }}</h3>
+	
+	{% if child_targets %}
+		
+		{% for target in child_targets %}
+		
+			<h4>{{ target.name }}</h4>
+			
+		{% endfor %}
+		
+	{% endif %}
+	
+{% endblock %}

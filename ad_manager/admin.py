@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 
+from ad_manager.forms import *
 from ad_manager.models import *
 
 # For future reference: http://stackoverflow.com/questions/3098681/is-there-a-naming-convention-for-django-apps (next app don't use underscores).
@@ -13,9 +14,17 @@ from ad_manager.models import *
 #
 #--------------------------------------------------------------------------
 
-class AdInline(admin.TabularInline):
+class AdAdminInline(admin.TabularInline):
     
-    fields = ('section', 'page_type', 'ad_type', 'site', 'ad_id', 'status', 'is_active', 'publish_date', 'expiration_date',)
+    #----------------------------------
+    # Fields:
+    #----------------------------------
+    
+    fields = ('ad_id', 'is_active', 'publish_date', 'expiration_date', 'ad_type', 'ad_group',)
+    
+    #----------------------------------
+    # Inline-specific options:
+    #----------------------------------
     
     model = Ad
     extra = 0
@@ -26,33 +35,77 @@ class AdInline(admin.TabularInline):
 #
 #--------------------------------------------------------------------------
 
-class SiteAdmin(admin.ModelAdmin):
+class TargetAdmin(admin.ModelAdmin):
     
     #----------------------------------
     # Fields:
     #----------------------------------
     
-    fields = ('slug', 'name', 'notes',)
+    fieldsets = [
+        
+        ('Meta', {
+            'fields': (
+                'slug',
+            ),
+            'classes': (
+                'collapse',
+            ),
+        },),
+        
+        (None, {
+            'fields': [
+                'parent',
+                'name',
+                'notes',
+            ],
+        },),
+        
+    ]
     
     prepopulated_fields = {
         'slug': ['name',],
     }
     
     #----------------------------------
+    # Forms:
+    #----------------------------------
+    
+    form = TargetAdminForm
+    
+    #----------------------------------
     # Change lists:
     #----------------------------------
     
-    list_display = ('__unicode__', 'name', 'slug',)
-    list_editable = ('name', 'slug',)
+    list_display = ('uni_sort', 'parent', 'name', 'slug',)
+    list_editable = ('parent', 'name', 'slug',)
     
-    search_fields = ('name',)
+    ordering = ['sort', 'name',]
+    
+    search_fields = ('name', 'parent',)
+
+class AdGroupAdmin(admin.ModelAdmin):
+    
+    #----------------------------------
+    # Fields:
+    #----------------------------------
+    
+    fields = ('target', 'page_type', 'aug_id', 'notes',)
+    
+    #----------------------------------
+    # Change lists:
+    #----------------------------------
+    
+    list_display = ('__unicode__', 'target', 'page_type', 'aug_id',)
+    list_editable = ('aug_id', 'page_type', 'target',)
+    
+    search_fields = ('aug_id', 'page_type', 'target', 'notes',)
     
     #----------------------------------
     # Inlines:
     #----------------------------------
     
     inlines = [
-        AdInline,
+        AdAdminInline,
     ]
 
 class AdAdmin(admin.ModelAdmin):
@@ -65,15 +118,12 @@ class AdAdmin(admin.ModelAdmin):
         
         (None, {
             'fields': (
-                'site',
-                'ad_id',
+                'ad_group',
                 'ad_type',
-                'section',
-                'status',
-                'page_type',
+                'ad_id',
                 'notes',
             ),
-        }),
+        },),
         
         ('Scheduling', {
             'fields': [
@@ -83,7 +133,7 @@ class AdAdmin(admin.ModelAdmin):
                     'expiration_date',
                 ),
             ],
-        }),
+        },),
         
     ]
     
@@ -91,11 +141,12 @@ class AdAdmin(admin.ModelAdmin):
     # Change lists:
     #----------------------------------
     
-    list_display = ('__unicode__', 'section', 'page_type', 'ad_type', 'site', 'ad_id', 'status', 'is_active', 'publish_date', 'expiration_date',)
-    list_filter  = ('section', 'page_type', 'ad_type', 'site', 'status', 'is_active',)
+    list_display = ('__unicode__', 'ad_group', 'ad_type', 'ad_id', 'is_active', 'publish_date', 'expiration_date',)
+    list_editable = ('ad_group', 'ad_type', 'ad_id', 'is_active', 'publish_date', 'expiration_date',)
+    list_filter  = ('ad_group', 'ad_type', 'is_active',)
     list_per_page = 250
     
-    search_fields = ('name', 'site', 'ad_id',)
+    search_fields = ('__unicode__', 'ad_id', 'notes',)
     
     actions = ['mark_active', 'mark_inactive',]
     actions_on_top = True
@@ -121,58 +172,11 @@ class AdAdmin(admin.ModelAdmin):
     mark_inactive.short_description = _(u'Mark selected ads as inactive')
     
     #----------------------------------
-    
-    def get_actions(self, request):
-        
-        actions = super(AdAdmin, self).get_actions(request)
-        
-        def dynamic_status(name, status):
-            
-            def status_func(self, request, queryset):
-                
-                queryset.update(status=status)
-            
-            status_func.__name__ = name
-            
-            status_func.short_description = _(u'Set status of selected to "%s"' % status)
-            
-            return status_func
-        
-        for status in AdStatus.objects.all():
-            
-            name = 'mark_status_%i' % status.id
-            
-            actions[name] = (dynamic_status(name, status), name, _(u'Set status of selected to "%s"' % status))
-            
-        return actions
-    
-    #----------------------------------
     # Change forms:
     #----------------------------------
     
     save_on_top = True
     save_as     = True
-
-class SectionAdmin(admin.ModelAdmin):
-    
-    #----------------------------------
-    # Fields:
-    #----------------------------------
-    
-    fields = ('slug', 'name', 'parent', 'aug_id', 'notes',)
-    
-    prepopulated_fields = {
-        'slug': ['name',],
-    }
-    
-    #----------------------------------
-    # Change lists:
-    #----------------------------------
-    
-    list_display = ('__unicode__', 'name', 'slug', 'aug_id', 'parent',)
-    list_editable = ('name', 'slug', 'aug_id', 'parent',)
-    
-    search_fields = ('name', 'aug_id', 'parent',)
 
 class PageTypeAdmin(admin.ModelAdmin):
     
@@ -180,7 +184,25 @@ class PageTypeAdmin(admin.ModelAdmin):
     # Fields:
     #----------------------------------
     
-    fields = ('slug', 'name', 'notes',)
+    fieldsets = [
+        
+        ('Meta', {
+            'fields': (
+                'slug',
+            ),
+            'classes': (
+                'collapse',
+            ),
+        },),
+        
+        (None, {
+            'fields': [
+                'name',
+                'notes',
+            ],
+        },),
+        
+    ]
     
     prepopulated_fields = {
         'slug': ['name',],
@@ -198,7 +220,7 @@ class AdTypeAdmin(admin.ModelAdmin):
     # Fields:
     #----------------------------------
     
-    fields = ('tag_type', 'name', 'width', 'height', 'notes',)
+    fields = ('name', 'width', 'height', 'tag_type', 'notes',)
     
     #----------------------------------
     # Change lists:
@@ -208,44 +230,22 @@ class AdTypeAdmin(admin.ModelAdmin):
     list_editable = ('name', 'width', 'height', 'tag_type',)
     list_filter  = ('tag_type',)
     
-    search_fields = ('name', 'width', 'height', 'tag_type',)
+    search_fields = ('name', 'width', 'height', 'tag_type', 'notes',)
 
-class AdStatusAdmin(admin.ModelAdmin):
+class TagTypeAdmin(admin.ModelAdmin):
     
     #----------------------------------
     # Fields:
     #----------------------------------
     
-    fieldsets = [
-        
-        (None, {
-            'fields': [
-                (
-                    'name',
-                    'is_live',
-                ),
-                'ordering',
-                'notes',
-            ],
-        }),
-        
-    ]
+    fields = ('name',)
     
     #----------------------------------
     # Change lists:
     #----------------------------------
     
-    list_display = ('__unicode__', 'name', 'is_live',)
-    list_editable = ('name', 'is_live',)
-    list_filter  = ('is_live',)
-    
-    search_fields = (
-        'name',
-    )
-    
-    actions_on_top = True
-    actions_on_bottom = True
-    actions_selection_counter = True
+    list_display = ('__unicode__', 'name',)
+    list_editable = ('name',)
 
 #--------------------------------------------------------------------------
 #
@@ -253,9 +253,9 @@ class AdStatusAdmin(admin.ModelAdmin):
 #
 #--------------------------------------------------------------------------
 
-admin.site.register(Site, SiteAdmin)
+admin.site.register(Target, TargetAdmin)
+admin.site.register(AdGroup, AdGroupAdmin)
 admin.site.register(Ad, AdAdmin)
-admin.site.register(Section, SectionAdmin)
 admin.site.register(PageType, PageTypeAdmin)
 admin.site.register(AdType, AdTypeAdmin)
-admin.site.register(AdStatus, AdStatusAdmin)
+admin.site.register(TagType, TagTypeAdmin)
