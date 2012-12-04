@@ -1,0 +1,62 @@
+[
+    {
+        "pk": 1, 
+        "model": "ad_manager.site", 
+        "fields": {
+            "name": "The Register-Guard", 
+            "notes": "", 
+            "slug": "register-guard", 
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ad_manager.section", 
+        "fields": {
+            "name": "Sports", 
+            "parent": null, 
+            "aug_id": 12345, 
+            "notes": "", 
+            "slug": "sports"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ad_manager.pagetype", 
+        "fields": {
+            "name": "Section", 
+            "notes": "", 
+            "slug": "section", 
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ad_manager.adtype", 
+        "fields": {
+            "name": "Leaderboard", 
+            "notes": "", 
+            "height": 90, 
+            "width": 728, 
+            "tag_type": 1
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ad_manager.adstatus", 
+        "fields": {
+            "name": "Open", 
+            "ordering": 0, 
+            "notes": "", 
+            "is_live": true
+        }
+    }
+    {
+        "pk": 2, 
+        "model": "ad_manager.adstatus", 
+        "fields": {
+            "name": "Closed", 
+            "ordering": 1, 
+            "notes": "", 
+            "is_live": false
+        }
+    }, 
+]
