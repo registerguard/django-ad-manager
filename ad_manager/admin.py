@@ -7,6 +7,7 @@ from ad_manager.models import *
 # For future reference: http://stackoverflow.com/questions/3098681/is-there-a-naming-convention-for-django-apps (next app don't use underscores).
 # https://bitbucket.org/codekoala/django-articles/src/fc6a1ae96dc8/articles/admin.py
 # https://github.com/concentricsky/django-basic-models/blob/master/basic_models/admin.py
+# https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.search_fields
 
 #--------------------------------------------------------------------------
 #
@@ -20,13 +21,21 @@ class AdAdminInline(admin.TabularInline):
     # Fields:
     #----------------------------------
     
-    fields = ('ad_id', 'is_active', 'publish_date', 'expiration_date', 'ad_type', 'ad_group',)
+    fields = (
+        'ad_id',
+        'is_active',
+        'publish_date',
+        'expiration_date',
+        'ad_type',
+        'ad_group',
+    )
     
     #----------------------------------
     # Inline-specific options:
     #----------------------------------
     
     model = Ad
+    
     extra = 0
 
 #--------------------------------------------------------------------------
@@ -76,12 +85,31 @@ class TargetAdmin(admin.ModelAdmin):
     # Change lists:
     #----------------------------------
     
-    list_display = ('uni_sort', 'parent', 'name', 'slug',)
-    list_editable = ('parent', 'name', 'slug',)
+    list_display = (
+        '__unicode__',
+        'parent',
+        'name',
+        'slug',
+    )
     
-    ordering = ['sort', 'name',]
+    list_editable = (
+        'name',
+        'parent',
+        'slug',
+    )
     
-    search_fields = ('name', 'parent',)
+    list_per_page = 50
+    
+    search_fields = (
+        'name',
+        'parent__name',
+    )
+    
+    actions_on_top = True
+    
+    actions_on_bottom = True
+    
+    actions_selection_counter = True
 
 class AdGroupAdmin(admin.ModelAdmin):
     
@@ -89,16 +117,45 @@ class AdGroupAdmin(admin.ModelAdmin):
     # Fields:
     #----------------------------------
     
-    fields = ('target', 'page_type', 'aug_id', 'notes',)
+    fields = (
+        'target',
+        'page_type',
+        'aug_id',
+        'notes',
+    )
     
     #----------------------------------
     # Change lists:
     #----------------------------------
     
-    list_display = ('__unicode__', 'target', 'page_type', 'aug_id',)
-    list_editable = ('aug_id', 'page_type', 'target',)
+    list_display = (
+        '__unicode__',
+        'target',
+        'page_type',
+        'aug_id',
+    )
     
-    search_fields = ('aug_id', 'page_type', 'target', 'notes',)
+    list_editable = (
+        'aug_id',
+        'page_type',
+        'target',
+    )
+    
+    list_per_page = 50
+    
+    search_fields = (
+        'aug_id',
+        'notes',
+        'page_type__name',
+        'target__name',
+        'target__parent__name',
+    )
+    
+    actions_on_top = True
+    
+    actions_on_bottom = True
+    
+    actions_selection_counter = True
     
     #----------------------------------
     # Inlines:
@@ -141,16 +198,54 @@ class AdAdmin(admin.ModelAdmin):
     # Change lists:
     #----------------------------------
     
-    list_display = ('__unicode__', 'ad_group', 'ad_type', 'ad_id', 'is_active', 'publish_date', 'expiration_date',)
-    list_editable = ('ad_group', 'ad_type', 'ad_id', 'is_active', 'publish_date', 'expiration_date',)
-    list_filter  = ('ad_group', 'ad_type', 'is_active',)
-    list_per_page = 250
+    list_display = (
+        '__unicode__',
+        'ad_group',
+        'ad_type',
+        'ad_id',
+        'is_active',
+        'publish_date',
+        'expiration_date',
+    )
     
-    search_fields = ('__unicode__', 'ad_id', 'notes',)
+    list_editable = (
+        'ad_group',
+        'ad_id',
+        'ad_type',
+        'expiration_date',
+        'is_active',
+        'publish_date',
+    )
     
-    actions = ['mark_active', 'mark_inactive',]
+    list_filter  = (
+        'ad_group',
+        'ad_type',
+        'is_active',
+    )
+    
+    list_per_page = 50
+    
+    search_fields = (
+        'ad_group__aug_id',
+        'ad_group__page_type__name',
+        'ad_group__target__name',
+        'ad_group__target__parent__name',
+        'ad_id',
+        'ad_type__height',
+        'ad_type__name',
+        'ad_type__width',
+        'notes',
+    )
+    
+    actions = [
+        'mark_active',
+        'mark_inactive',
+    ]
+    
     actions_on_top = True
+    
     actions_on_bottom = True
+    
     actions_selection_counter = True
     
     #----------------------------------
@@ -176,6 +271,7 @@ class AdAdmin(admin.ModelAdmin):
     #----------------------------------
     
     save_on_top = True
+    
     save_as     = True
 
 class PageTypeAdmin(admin.ModelAdmin):
@@ -212,6 +308,29 @@ class PageTypeAdmin(admin.ModelAdmin):
     # Change lists:
     #----------------------------------
     
+    list_display = (
+        '__unicode__',
+        'name',
+        'slug',
+    )
+    
+    list_editable = (
+        'name',
+        'slug',
+    )
+    
+    list_per_page = 50
+    
+    actions_on_top = True
+    
+    actions_on_bottom = True
+    
+    actions_selection_counter = True
+    
+    #----------------------------------
+    # Change lists:
+    #----------------------------------
+    
     actions_selection_counter = True
 
 class AdTypeAdmin(admin.ModelAdmin):
@@ -220,17 +339,52 @@ class AdTypeAdmin(admin.ModelAdmin):
     # Fields:
     #----------------------------------
     
-    fields = ('name', 'width', 'height', 'tag_type', 'notes',)
+    fields = (
+        'name',
+        'width',
+        'height',
+        'tag_type',
+        'notes',
+    )
     
     #----------------------------------
     # Change lists:
     #----------------------------------
     
-    list_display = ('__unicode__', 'name', 'width', 'height', 'tag_type',)
-    list_editable = ('name', 'width', 'height', 'tag_type',)
-    list_filter  = ('tag_type',)
+    list_display = (
+        '__unicode__',
+        'name',
+        'width',
+        'height',
+        'tag_type',
+    )
     
-    search_fields = ('name', 'width', 'height', 'tag_type', 'notes',)
+    list_editable = (
+        'height',
+        'name',
+        'tag_type',
+        'width',
+    )
+    
+    list_filter  = (
+        'tag_type',
+    )
+    
+    list_per_page = 50
+    
+    search_fields = (
+        'height',
+        'name',
+        'notes',
+        'tag_type__name',
+        'width',
+    )
+    
+    actions_on_top = True
+    
+    actions_on_bottom = True
+    
+    actions_selection_counter = True
 
 class TagTypeAdmin(admin.ModelAdmin):
     
@@ -238,14 +392,30 @@ class TagTypeAdmin(admin.ModelAdmin):
     # Fields:
     #----------------------------------
     
-    fields = ('name',)
+    fields = (
+        'name',
+    )
     
     #----------------------------------
     # Change lists:
     #----------------------------------
     
-    list_display = ('__unicode__', 'name',)
-    list_editable = ('name',)
+    list_display = (
+        '__unicode__',
+        'name',
+    )
+    
+    list_editable = (
+        'name',
+    )
+    
+    list_per_page = 50
+    
+    actions_on_top = True
+    
+    actions_on_bottom = True
+    
+    actions_selection_counter = True
 
 #--------------------------------------------------------------------------
 #

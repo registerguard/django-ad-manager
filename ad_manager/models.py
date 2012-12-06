@@ -3,6 +3,7 @@ import datetime
 from django import forms
 from django.core import urlresolvers
 from django.db import models
+from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 
 from ad_manager import managers
@@ -51,6 +52,7 @@ class Base(models.Model):
     class Meta:
         
         abstract = True
+        get_latest_by = 'modified'
     
     #----------------------------------
     # Custom methods:
@@ -73,9 +75,6 @@ class Target(Base):
     # All database fields:
     #----------------------------------
     
-    # Hidden:
-    sort = models.IntegerField(default=0, editable=False,)
-    
     # Meta:
     slug     = models.SlugField(max_length=255, help_text=_(u'Short descriptive unique name for use in urls.'),)
     
@@ -97,7 +96,7 @@ class Target(Base):
     
     class Meta:
         
-        ordering = ['sort', 'name',]
+        ordering = ['parent__name', 'name',]
         unique_together = ('slug', 'parent',)
     
     #----------------------------------
@@ -129,11 +128,9 @@ class Target(Base):
                     raise forms.ValidationError(_(u'You may not save a target in itself!'))
         
         if not self.slug:
-            self.slug = slugify(self.name, instance=self)
+            self.slug = slugify(self.name)
         
         super(Target, self).save(**kwargs) # Call the "real" save()
-        
-        self._re_sort()
     
     #----------------------------------
     # def get_absolute_url()
@@ -279,40 +276,6 @@ class Target(Base):
         flat_list = self._flatten(children_list[ix:])
         
         return flat_list
-    
-    #----------------------------------
-    
-    @classmethod
-    def _re_sort(cls):
-        
-        """
-        Grab all the targets, sort them by their full name and write their
-        index in the sorted list to the sort field.
-        It needs the @classmethod decorator so we don't get "AttributeError:
-        Manager isn't accessible via Category instances".
-        This classmethod is hooked into the save method.
-        Since we're making calls to the super's save method in both the save()
-        and re_sort() methods, we don't get a maximum recursion error.
-        """
-        
-        targets = sorted([(x.__unicode__().lower(), x) for x in cls.objects.all()]) # Can I use self.parents() here?
-        
-        for i in range(len(targets)):
-            
-            full_name, target = targets[i]
-            
-            target.sort = i
-            
-            super(Target, target).save() # Call the "real" save()
-    
-    #----------------------------------
-    
-    def uni_sort(self):
-        
-        return self.__unicode__()
-        
-    uni_sort.admin_order_field = 'sort'
-    uni_sort.short_description = _(u'name')
 
 class AdGroup(Base):
     
@@ -333,7 +296,7 @@ class AdGroup(Base):
     
     class Meta:
         
-        pass
+        ordering = ['target',]
     
     #----------------------------------
     # def __XXX__()
@@ -341,7 +304,9 @@ class AdGroup(Base):
     
     def __unicode__(self):
         
-        return _(u'%s') % self.target
+        #return _(u'%s') % ' | '.join(filter(None, (self.target, str(self.page_type))))
+        
+        return _(u'%s%s%s') % (self.target, (' | ' if self.page_type else ''), self.page_type)
 
 class Ad(Base):
     
@@ -373,7 +338,8 @@ class Ad(Base):
     
     class Meta:
         
-        pass
+        ordering = ['ad_group',]
+        get_latest_by = 'modified'
     
     #----------------------------------
     # def __XXX__()
@@ -416,7 +382,7 @@ class PageType(Base):
     
     class Meta:
         
-        pass
+        ordering = ['name',]
     
     #----------------------------------
     # def __XXX__()
@@ -454,7 +420,7 @@ class AdType(Base):
     
     class Meta:
         
-        ordering = ('name',)
+        ordering = ['name',]
     
     #----------------------------------
     # def __XXX__()

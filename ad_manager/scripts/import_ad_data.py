@@ -41,37 +41,27 @@ def main(filename):
                 ad_unit_id = current_ad_unit_id
                 
             print '"{:<12s}" "{:<17s}" "{:<7s}" "{:<18s}" "{:<9s}" "{:<38s}" "{:<5s}" "{:<71s}" "{:<s}" "{:<s}"'.format(site_section, site_subsection, location_type, ad_unit, ad_unit_size, ad_unit_group, ad_unit_group_id, ad_unit_name, ad_unit_id, full_script)
-        else:
-            print 'Row of nothingness', row
             
             tag_type, tag_type_created = TagType.objects.get_or_create(name='<iframe>')
             ad_type, ad_type_created = AdType.objects.get_or_create(name=ad_unit, width=ad_unit_size.split(' x ')[0], 
                 defaults = {'height': ad_unit_size.split(' x ')[1], 'tag_type': tag_type,}
             )
-            page_type, page_type_created = PageType.objects.get_or_create(name=location_type, 
-                defaults = {'slug': slugify(location_type)}
-            )
+            print 'location_type::', '"', location_type, '"'
+            page_type, page_type_created = PageType.objects.get_or_create(name=location_type, slug=slugify(location_type))
             subsection, subsection_created = Target.objects.get_or_create(name=site_subsection)
-            section, section_created = Target.objects.get_or_create(name=site_section)
-            ad_group, ad_group_created = AdGroup.objects.get_or_created(aug_id=ad_unit_group_id)
+            if subsection_created and site_section:
+                section, section_created = Target.objects.get_or_create(name=site_section)
+                subsection.parent = section
+                subsection.save()
+            ad_group, ad_group_created = AdGroup.objects.get_or_create(aug_id=ad_unit_group_id, 
+                defaults = {'page_type': page_type, 'target': subsection}
+            )
             ad, ad_created = Ad.objects.get_or_create(ad_id=ad_unit_id, 
-                defaults = {ad_type=ad_type, ad_group=ad_group}
+                defaults = {'ad_type': ad_type, 'ad_group': ad_group}
             )
             
-#             site, site_created = Site.objects.get_or_create(name='The Register-Guard',)
-#             section, section_created = Section.objects.get_or_create(name=site_section, 
-#                 defaults = {'slug': slugify(site_section),'aug_id': ad_unit_group_id})
-#             page_type, page_type_created = PageType.objects.get_or_create(name=location_type, 
-#                 defaults = {'slug': slugify(location_type)})
-#             ad_type, ad_type_created = AdType.objects.get_or_create(name=ad_unit, width=ad_unit_size.split(' x ')[0], 
-#                 defaults = {'height': ad_unit_size.split(' x ')[1], 'tag_type': 1,})
-#             
-#             new_ad, new_ad_created = Ad.objects.get_or_create(
-#                 site = site,
-#                 section = section,
-#                 page_type = page_type,
-#                 ad_type = ad_type,
-#             )
+        else:
+            print 'Row of nothingness', row
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
