@@ -92,31 +92,14 @@ class JSONResponseMixin(object):
 
 class Api(JSONResponseMixin, BaseDetailView):
     
-    def get(self, request, *args, **kwargs):
+    def get(self, request, parent=None, child=None, page=None, *args, **kwargs):
         
         # Do some queries here to collect your data for the response:
         
-        target_slugs = self.kwargs['targets']
-        
-        target_slugs_split = target_slugs.split('/')
-        
-        target_list = []
-        
-        for slug in target_slugs_split:
-            
-            if not target_list:
-                parent = None
-            
-            else:
-                parent = target_list[-1]
-            
-            #target = get_object_or_404(Target, slug=slug, parent=parent)
-            target = [slug, parent]
-        
         context = {
-            'target_slugs': target_slugs,
-            'target_slugs_split': target_slugs_split,
-            'target': target,
+            'parent': parent,
+            'child': child,
+            'page': page,
         }
         
         return self.render_to_response(context)

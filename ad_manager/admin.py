@@ -8,6 +8,7 @@ from ad_manager.models import *
 # https://bitbucket.org/codekoala/django-articles/src/fc6a1ae96dc8/articles/admin.py
 # https://github.com/concentricsky/django-basic-models/blob/master/basic_models/admin.py
 # https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.search_fields
+# http://stackoverflow.com/questions/13180876/how-do-i-render-a-cached-jsonp-view-in-django
 
 #--------------------------------------------------------------------------
 #

@@ -1,0 +1,6541 @@
+[
+    {
+        "pk": 2, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Blue Chip", 
+            "parent": 1, 
+            "created": "2012-12-04 16:30:59", 
+            "notes": "", 
+            "modified": "2012-12-04 16:30:59", 
+            "slug": "blue-chip"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Arts", 
+            "parent": 3, 
+            "created": "2012-12-04 16:59:08", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:08", 
+            "slug": "arts"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Encore", 
+            "parent": 3, 
+            "created": "2012-12-04 16:59:09", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "slug": "encore"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "go Entertainment", 
+            "parent": 3, 
+            "created": "2012-12-04 16:59:09", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "slug": "go-entertainment"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "TV Listings", 
+            "parent": 3, 
+            "created": "2012-12-04 16:59:09", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "slug": "tv-listings"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Ticket Files", 
+            "parent": 9, 
+            "created": "2012-12-04 16:59:09", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "slug": "ticket-files"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Dash", 
+            "parent": 10, 
+            "created": "2012-12-04 16:59:23", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:23", 
+            "slug": "dash"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Discovery", 
+            "parent": 10, 
+            "created": "2012-12-04 16:59:23", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:23", 
+            "slug": "discovery"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Food", 
+            "parent": 10, 
+            "created": "2012-12-04 16:59:24", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "slug": "food"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Health & Fitness", 
+            "parent": 10, 
+            "created": "2012-12-04 16:59:24", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "slug": "health-fitness"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Home & Garden", 
+            "parent": 10, 
+            "created": "2012-12-04 16:59:24", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "slug": "home-garden"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Lifestyles", 
+            "parent": 10, 
+            "created": "2012-12-04 16:59:24", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "slug": "lifestyles"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Tastings", 
+            "parent": 10, 
+            "created": "2012-12-04 16:59:24", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "slug": "tastings"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Columnist", 
+            "parent": 19, 
+            "created": "2012-12-04 16:59:34", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:34", 
+            "slug": "columnist"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Homepage", 
+            "parent": 19, 
+            "created": "2012-12-04 16:59:34", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:34", 
+            "slug": "homepage"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Local", 
+            "parent": 19, 
+            "created": "2012-12-04 16:59:34", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:34", 
+            "slug": "local"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Maps", 
+            "parent": 19, 
+            "created": "2012-12-04 16:59:34", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:34", 
+            "slug": "maps"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "News Tips", 
+            "parent": 19, 
+            "created": "2012-12-04 16:59:35", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "slug": "news-tips"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Northwest Now", 
+            "parent": 19, 
+            "created": "2012-12-04 16:59:35", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "slug": "northwest-now"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Obituaries", 
+            "parent": 19, 
+            "created": "2012-12-04 16:59:35", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "slug": "obituaries"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Springfield Extra", 
+            "parent": 19, 
+            "created": "2012-12-04 16:59:35", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "slug": "springfield-extra"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Weather", 
+            "parent": 19, 
+            "created": "2012-12-04 16:59:35", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "slug": "weather"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Close to Home", 
+            "parent": 29, 
+            "created": "2012-12-04 16:59:35", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "slug": "close-to-home"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "School Lane", 
+            "parent": 29, 
+            "created": "2012-12-04 16:59:35", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "slug": "school-lane"
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Family Tributes", 
+            "parent": 31, 
+            "created": "2012-12-04 16:59:44", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:44", 
+            "slug": "family-tributes"
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Basketball", 
+            "parent": 64, 
+            "created": "2012-12-04 18:29:13", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "slug": "basketball"
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Football", 
+            "parent": 64, 
+            "created": "2012-12-04 18:29:13", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "slug": "football"
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Golf", 
+            "parent": 64, 
+            "created": "2012-12-04 18:29:13", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "slug": "golf"
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Outdoors", 
+            "parent": 64, 
+            "created": "2012-12-04 18:29:13", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "slug": "outdoors"
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Preps", 
+            "parent": 64, 
+            "created": "2012-12-04 18:29:13", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "slug": "preps"
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Track & Field", 
+            "parent": 64, 
+            "created": "2012-12-04 18:29:14", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "slug": "track-field"
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "College Football", 
+            "parent": 72, 
+            "created": "2012-12-04 18:29:14", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "slug": "college-football"
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Oregon Football", 
+            "parent": 72, 
+            "created": "2012-12-04 18:29:14", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "slug": "oregon-football"
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Oregon Men's Basketball", 
+            "parent": 72, 
+            "created": "2012-12-04 18:29:14", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "slug": "oregon-mens-basketball"
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Oregon Women's Basketball", 
+            "parent": 72, 
+            "created": "2012-12-04 18:29:14", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "slug": "oregon-womens-basketball"
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Prep Sports", 
+            "parent": 72, 
+            "created": "2012-12-04 18:29:14", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "slug": "prep-sports"
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Talkin' Baseball", 
+            "parent": 72, 
+            "created": "2012-12-04 18:29:14", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "slug": "talkin-baseball"
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Track & Field", 
+            "parent": 72, 
+            "created": "2012-12-05 09:28:49", 
+            "notes": "", 
+            "modified": "2012-12-05 09:28:49", 
+            "slug": "track-field"
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "Xs & Os", 
+            "parent": 72, 
+            "created": "2012-12-04 18:29:15", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:15", 
+            "slug": "xs-os"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "BUSINESS", 
+            "parent": null, 
+            "created": "2012-12-04 16:30:59", 
+            "notes": "", 
+            "modified": "2012-12-04 16:30:59", 
+            "slug": "business"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "ENTERTAINMENT", 
+            "parent": null, 
+            "created": "2012-12-04 16:59:08", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:08", 
+            "slug": "entertainment"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "ENTERTAINMENT | BLOGS", 
+            "parent": null, 
+            "created": "2012-12-04 16:59:09", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "slug": "entertainment-blogs"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "LIFE", 
+            "parent": null, 
+            "created": "2012-12-04 16:59:23", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:23", 
+            "slug": "life"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "NEWS", 
+            "parent": null, 
+            "created": "2012-12-04 16:59:34", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:34", 
+            "slug": "news"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "NEWS | BLOGS", 
+            "parent": null, 
+            "created": "2012-12-04 16:59:35", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "slug": "news-blogs"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "OBITUARIES", 
+            "parent": null, 
+            "created": "2012-12-04 16:59:44", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:44", 
+            "slug": "obituaries"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "OPINION", 
+            "parent": null, 
+            "created": "2012-12-04 16:59:57", 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:57", 
+            "slug": "opinion"
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "SPORTS", 
+            "parent": null, 
+            "created": "2012-12-04 18:29:13", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "slug": "sports"
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "ad_manager.target", 
+        "fields": {
+            "name": "SPORTS | BLOGS", 
+            "parent": null, 
+            "created": "2012-12-04 18:29:14", 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "slug": "sports-blogs"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 2, 
+            "created": "2012-12-04 16:30:59", 
+            "aug_id": 14026, 
+            "notes": "", 
+            "modified": "2012-12-04 16:30:59", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 2, 
+            "created": "2012-12-04 16:30:59", 
+            "aug_id": 14025, 
+            "notes": "", 
+            "modified": "2012-12-04 16:30:59", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 4, 
+            "created": "2012-12-04 16:59:08", 
+            "aug_id": 14051, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:08", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 4, 
+            "created": "2012-12-04 16:59:09", 
+            "aug_id": 14052, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 5, 
+            "created": "2012-12-04 16:59:09", 
+            "aug_id": 14054, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 5, 
+            "created": "2012-12-04 16:59:09", 
+            "aug_id": 14053, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 6, 
+            "created": "2012-12-04 16:59:09", 
+            "aug_id": 14056, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 6, 
+            "created": "2012-12-04 16:59:09", 
+            "aug_id": 14055, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 7, 
+            "created": "2012-12-04 16:59:09", 
+            "aug_id": 14057, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 7, 
+            "created": "2012-12-04 16:59:09", 
+            "aug_id": 14058, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 8, 
+            "created": "2012-12-04 16:59:09", 
+            "aug_id": 14059, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 8, 
+            "created": "2012-12-04 16:59:09", 
+            "aug_id": 14060, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:09", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 11, 
+            "created": "2012-12-04 16:59:23", 
+            "aug_id": 14064, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:23", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 11, 
+            "created": "2012-12-04 16:59:23", 
+            "aug_id": 14063, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:23", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 12, 
+            "created": "2012-12-04 16:59:23", 
+            "aug_id": 14065, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:23", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 12, 
+            "created": "2012-12-04 16:59:24", 
+            "aug_id": 14066, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 13, 
+            "created": "2012-12-04 16:59:24", 
+            "aug_id": 14067, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 13, 
+            "created": "2012-12-04 16:59:24", 
+            "aug_id": 14068, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 14, 
+            "created": "2012-12-04 16:59:24", 
+            "aug_id": 14070, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 14, 
+            "created": "2012-12-04 16:59:24", 
+            "aug_id": 14069, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 15, 
+            "created": "2012-12-04 16:59:24", 
+            "aug_id": 14072, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 15, 
+            "created": "2012-12-04 16:59:24", 
+            "aug_id": 14071, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 16, 
+            "created": "2012-12-04 16:59:24", 
+            "aug_id": 14073, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 16, 
+            "created": "2012-12-04 16:59:24", 
+            "aug_id": 14074, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 17, 
+            "created": "2012-12-04 16:59:24", 
+            "aug_id": 14075, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 17, 
+            "created": "2012-12-04 16:59:24", 
+            "aug_id": 14076, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:24", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 21, 
+            "created": "2012-12-04 16:59:34", 
+            "aug_id": 13789, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:34", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 21, 
+            "created": "2012-12-04 17:00:11", 
+            "aug_id": 13793, 
+            "notes": "", 
+            "modified": "2012-12-04 17:00:11", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 21, 
+            "created": "2012-12-04 17:00:11", 
+            "aug_id": 13734, 
+            "notes": "", 
+            "modified": "2012-12-04 17:00:11", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 21, 
+            "created": "2012-12-04 16:59:34", 
+            "aug_id": 13790, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:34", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 18, 
+            "created": "2012-12-04 16:59:34", 
+            "aug_id": 13785, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:34", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 18, 
+            "created": "2012-12-04 16:59:34", 
+            "aug_id": 13786, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:34", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 20, 
+            "created": "2012-12-04 17:00:11", 
+            "aug_id": 13792, 
+            "notes": "", 
+            "modified": "2012-12-04 17:00:11", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 20, 
+            "created": "2012-12-04 17:00:11", 
+            "aug_id": 13733, 
+            "notes": "", 
+            "modified": "2012-12-04 17:00:11", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 20, 
+            "created": "2012-12-04 16:59:34", 
+            "aug_id": 13787, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:34", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 20, 
+            "created": "2012-12-04 16:59:34", 
+            "aug_id": 13788, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:34", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 22, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 13821, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 22, 
+            "created": "2012-12-04 16:59:34", 
+            "aug_id": 13820, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:34", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 23, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 14008, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 23, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 14010, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 24, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 14012, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 24, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 14011, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 25, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 14015, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 25, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 14014, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 26, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 14016, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 26, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 14017, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 27, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 14023, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 28, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 14018, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 28, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 14019, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 30, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 14022, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 30, 
+            "created": "2012-12-04 16:59:35", 
+            "aug_id": 14020, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:35", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 32, 
+            "created": "2012-12-04 16:59:44", 
+            "aug_id": 14079, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:44", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 32, 
+            "created": "2012-12-04 16:59:44", 
+            "aug_id": 14080, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:44", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 107, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 65, 
+            "created": "2012-12-04 18:29:13", 
+            "aug_id": 13794, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 106, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 65, 
+            "created": "2012-12-04 18:29:13", 
+            "aug_id": 13735, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 109, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 66, 
+            "created": "2012-12-04 18:29:13", 
+            "aug_id": 13795, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 108, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 66, 
+            "created": "2012-12-04 18:29:13", 
+            "aug_id": 13736, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 111, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 67, 
+            "created": "2012-12-04 18:29:13", 
+            "aug_id": 13796, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 110, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 67, 
+            "created": "2012-12-04 18:29:13", 
+            "aug_id": 13737, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 112, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 68, 
+            "created": "2012-12-04 18:29:13", 
+            "aug_id": 13738, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 113, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 68, 
+            "created": "2012-12-04 18:29:13", 
+            "aug_id": 13797, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 115, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 69, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 14034, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 114, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 69, 
+            "created": "2012-12-04 18:29:13", 
+            "aug_id": 14033, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 117, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 70, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10002, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 116, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 70, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10001, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 119, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 71, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10006, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 118, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 71, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10005, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 120, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 73, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10007, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 121, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 73, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10008, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 122, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 74, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10009, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 123, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 74, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10010, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 124, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 75, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10011, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 125, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 75, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10012, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 126, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 76, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10013, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 127, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 76, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10014, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 128, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 77, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 13745, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 129, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 77, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10015, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:14", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 131, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 79, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 10016, 
+            "notes": "", 
+            "modified": "2012-12-05 09:30:02", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 130, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 79, 
+            "created": "2012-12-04 18:29:14", 
+            "aug_id": 13746, 
+            "notes": "", 
+            "modified": "2012-12-05 09:30:02", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 133, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 78, 
+            "created": "2012-12-04 18:29:15", 
+            "aug_id": 10017, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:15", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 132, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 78, 
+            "created": "2012-12-04 18:29:15", 
+            "aug_id": 13747, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:15", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 1, 
+            "created": "2012-12-04 16:30:59", 
+            "aug_id": 14024, 
+            "notes": "", 
+            "modified": "2012-12-04 16:30:59", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 1, 
+            "created": "2012-12-04 16:30:59", 
+            "aug_id": 10267, 
+            "notes": "", 
+            "modified": "2012-12-04 16:30:59", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 3, 
+            "created": "2012-12-04 16:59:08", 
+            "aug_id": 14050, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:08", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 3, 
+            "created": "2012-12-04 16:59:08", 
+            "aug_id": 14049, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:08", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 10, 
+            "created": "2012-12-04 16:59:23", 
+            "aug_id": 14061, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:23", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 10, 
+            "created": "2012-12-04 16:59:23", 
+            "aug_id": 14062, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:23", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 33, 
+            "created": "2012-12-04 16:59:57", 
+            "aug_id": 14077, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:57", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 33, 
+            "created": "2012-12-04 16:59:57", 
+            "aug_id": 14078, 
+            "notes": "", 
+            "modified": "2012-12-04 16:59:57", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 105, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 64, 
+            "created": "2012-12-04 18:29:13", 
+            "aug_id": 13791, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "page_type": 2
+        }
+    }, 
+    {
+        "pk": 104, 
+        "model": "ad_manager.adgroup", 
+        "fields": {
+            "target": 64, 
+            "created": "2012-12-04 18:29:13", 
+            "aug_id": 13732, 
+            "notes": "", 
+            "modified": "2012-12-04 18:29:13", 
+            "page_type": 1
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320685, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 2, 
+            "ad_group": 3, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320684, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 1, 
+            "ad_group": 3, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320693, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 3, 
+            "ad_group": 4, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320692, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 2, 
+            "ad_group": 4, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320691, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 1, 
+            "ad_group": 4, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320688, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 4, 
+            "ad_group": 3, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320686, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 3, 
+            "ad_group": 3, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322893, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 3, 
+            "ad_group": 8, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322887, 
+            "created": "2012-12-04 16:59:08", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:08", 
+            "ad_type": 1, 
+            "ad_group": 7, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322888, 
+            "created": "2012-12-04 16:59:08", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:08", 
+            "ad_type": 2, 
+            "ad_group": 7, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322889, 
+            "created": "2012-12-04 16:59:08", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:08", 
+            "ad_type": 3, 
+            "ad_group": 7, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322890, 
+            "created": "2012-12-04 16:59:08", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:08", 
+            "ad_type": 4, 
+            "ad_group": 7, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322891, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 1, 
+            "ad_group": 8, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322892, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 2, 
+            "ad_group": 8, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322894, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 1, 
+            "ad_group": 9, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322900, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 3, 
+            "ad_group": 10, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322899, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 2, 
+            "ad_group": 10, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322898, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 1, 
+            "ad_group": 10, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322897, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 4, 
+            "ad_group": 9, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322896, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 3, 
+            "ad_group": 9, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322895, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 2, 
+            "ad_group": 9, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322991, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 2, 
+            "ad_group": 12, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322986, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 1, 
+            "ad_group": 11, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322987, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 2, 
+            "ad_group": 11, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322988, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 3, 
+            "ad_group": 11, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322989, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 4, 
+            "ad_group": 11, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322990, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 1, 
+            "ad_group": 12, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322992, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 3, 
+            "ad_group": 12, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322996, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 4, 
+            "ad_group": 13, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322993, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 1, 
+            "ad_group": 13, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322994, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 2, 
+            "ad_group": 13, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322995, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 3, 
+            "ad_group": 13, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322997, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 1, 
+            "ad_group": 14, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322998, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 2, 
+            "ad_group": 14, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322999, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 3, 
+            "ad_group": 14, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323011, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 1, 
+            "ad_group": 15, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323017, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 3, 
+            "ad_group": 16, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323016, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 2, 
+            "ad_group": 16, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323015, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 1, 
+            "ad_group": 16, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323014, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 4, 
+            "ad_group": 15, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323013, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 3, 
+            "ad_group": 15, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323012, 
+            "created": "2012-12-04 16:59:09", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:09", 
+            "ad_type": 2, 
+            "ad_group": 15, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323040, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 1, 
+            "ad_group": 20, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323042, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 3, 
+            "ad_group": 20, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323041, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 2, 
+            "ad_group": 20, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323035, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 1, 
+            "ad_group": 19, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323039, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 4, 
+            "ad_group": 19, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323038, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 3, 
+            "ad_group": 19, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323037, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 2, 
+            "ad_group": 19, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323043, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 1, 
+            "ad_group": 21, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323044, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 2, 
+            "ad_group": 21, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323045, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 3, 
+            "ad_group": 21, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323046, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 4, 
+            "ad_group": 21, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323047, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 1, 
+            "ad_group": 22, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323048, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 2, 
+            "ad_group": 22, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323049, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 3, 
+            "ad_group": 22, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323056, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 3, 
+            "ad_group": 24, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323050, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 1, 
+            "ad_group": 23, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323051, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 2, 
+            "ad_group": 23, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323052, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 3, 
+            "ad_group": 23, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323053, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 4, 
+            "ad_group": 23, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323054, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 1, 
+            "ad_group": 24, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323055, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 2, 
+            "ad_group": 24, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323058, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 2, 
+            "ad_group": 25, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323059, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 3, 
+            "ad_group": 25, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323060, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 4, 
+            "ad_group": 25, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323061, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 1, 
+            "ad_group": 26, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323062, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 2, 
+            "ad_group": 26, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323063, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 3, 
+            "ad_group": 26, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323057, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 1, 
+            "ad_group": 25, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 95, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323068, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 4, 
+            "ad_group": 27, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 93, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323065, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 2, 
+            "ad_group": 27, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 94, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323066, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 3, 
+            "ad_group": 27, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 96, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323069, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 1, 
+            "ad_group": 28, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 97, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323071, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 2, 
+            "ad_group": 28, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 98, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323072, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 3, 
+            "ad_group": 28, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323064, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 1, 
+            "ad_group": 27, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 101, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323084, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 3, 
+            "ad_group": 29, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 102, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323085, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 4, 
+            "ad_group": 29, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 103, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323086, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 1, 
+            "ad_group": 30, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 100, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323083, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 2, 
+            "ad_group": 29, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 99, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323082, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 1, 
+            "ad_group": 29, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 104, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323087, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 2, 
+            "ad_group": 30, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 105, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323088, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 3, 
+            "ad_group": 30, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 107, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323096, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 2, 
+            "ad_group": 31, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 106, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323095, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 1, 
+            "ad_group": 31, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 108, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323097, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 3, 
+            "ad_group": 31, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 109, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323098, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 4, 
+            "ad_group": 31, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 110, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323099, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 1, 
+            "ad_group": 32, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 111, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323100, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 2, 
+            "ad_group": 32, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 112, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323101, 
+            "created": "2012-12-04 16:59:24", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:24", 
+            "ad_type": 3, 
+            "ad_group": 32, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 129, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304115, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 3, 
+            "ad_group": 37, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 220, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302420, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 3, 
+            "ad_group": 63, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 219, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302419, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 2, 
+            "ad_group": 63, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 218, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302418, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 1, 
+            "ad_group": 63, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 217, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302417, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 4, 
+            "ad_group": 62, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 216, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302416, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 3, 
+            "ad_group": 62, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 215, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302415, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 2, 
+            "ad_group": 62, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 214, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302414, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 1, 
+            "ad_group": 62, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 127, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304113, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 1, 
+            "ad_group": 37, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 128, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304114, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 2, 
+            "ad_group": 37, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 130, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304116, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 4, 
+            "ad_group": 37, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 131, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304117, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 1, 
+            "ad_group": 38, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 132, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304119, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 2, 
+            "ad_group": 38, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 133, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304120, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 3, 
+            "ad_group": 38, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 113, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304099, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 1, 
+            "ad_group": 33, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 114, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304100, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 2, 
+            "ad_group": 33, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 118, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304104, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 2, 
+            "ad_group": 34, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 117, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304103, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 1, 
+            "ad_group": 34, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 116, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304102, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 4, 
+            "ad_group": 33, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 115, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304101, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 3, 
+            "ad_group": 33, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 119, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304105, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 3, 
+            "ad_group": 34, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 212, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302412, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 2, 
+            "ad_group": 61, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 213, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302413, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 3, 
+            "ad_group": 61, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 125, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304111, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 2, 
+            "ad_group": 36, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 126, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304112, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 3, 
+            "ad_group": 36, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 208, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302408, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 2, 
+            "ad_group": 60, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 209, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302409, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 3, 
+            "ad_group": 60, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 210, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302410, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 4, 
+            "ad_group": 60, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 211, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302411, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 1, 
+            "ad_group": 61, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 207, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302407, 
+            "created": "2012-12-04 17:00:11", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 17:00:11", 
+            "ad_type": 1, 
+            "ad_group": 60, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 120, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304106, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 1, 
+            "ad_group": 35, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 121, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304107, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 2, 
+            "ad_group": 35, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 122, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304108, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 3, 
+            "ad_group": 35, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 123, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304109, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 4, 
+            "ad_group": 35, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 124, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304110, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 1, 
+            "ad_group": 36, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 139, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304128, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 40, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 138, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304126, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 1, 
+            "ad_group": 40, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 137, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304125, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 4, 
+            "ad_group": 39, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 136, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304124, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 3, 
+            "ad_group": 39, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 135, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304123, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 2, 
+            "ad_group": 39, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 134, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304121, 
+            "created": "2012-12-04 16:59:34", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:34", 
+            "ad_type": 1, 
+            "ad_group": 39, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 140, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304130, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 40, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 146, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304136, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 42, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 142, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304132, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 41, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 143, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304133, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 41, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 144, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304134, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 4, 
+            "ad_group": 41, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 145, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304135, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 1, 
+            "ad_group": 42, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 147, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304137, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 42, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 141, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304131, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 1, 
+            "ad_group": 41, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 154, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304144, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 44, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 149, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304139, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 43, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 150, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304140, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 43, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 151, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304141, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 4, 
+            "ad_group": 43, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 152, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304142, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 1, 
+            "ad_group": 44, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 153, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304143, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 44, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 148, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304138, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 1, 
+            "ad_group": 43, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 159, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304149, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 1, 
+            "ad_group": 46, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 155, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304145, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 1, 
+            "ad_group": 45, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 156, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304156, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 45, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 157, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304147, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 45, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 158, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304148, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 4, 
+            "ad_group": 45, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 160, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304150, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 46, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 161, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304151, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 46, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 162, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304152, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 1, 
+            "ad_group": 47, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 167, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304158, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 48, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 166, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304157, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 48, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 165, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304155, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 4, 
+            "ad_group": 47, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 164, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304154, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 47, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 163, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304153, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 47, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 171, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320645, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 4, 
+            "ad_group": 49, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 168, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320642, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 1, 
+            "ad_group": 49, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 169, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320643, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 49, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 170, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320644, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 49, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 176, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304163, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 1, 
+            "ad_group": 51, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 177, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304164, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 51, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 178, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304165, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 51, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 172, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304159, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 1, 
+            "ad_group": 50, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 173, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304160, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 50, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 174, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304161, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 50, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 175, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304162, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 4, 
+            "ad_group": 50, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 185, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304172, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 53, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 179, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304166, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 1, 
+            "ad_group": 52, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 180, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304167, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 52, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 181, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304168, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 3, 
+            "ad_group": 52, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 182, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304169, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 4, 
+            "ad_group": 52, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 183, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304170, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 1, 
+            "ad_group": 53, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 184, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 304171, 
+            "created": "2012-12-04 16:59:35", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:35", 
+            "ad_type": 2, 
+            "ad_group": 53, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 186, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323130, 
+            "created": "2012-12-04 16:59:44", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:44", 
+            "ad_type": 1, 
+            "ad_group": 54, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 187, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323131, 
+            "created": "2012-12-04 16:59:44", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:44", 
+            "ad_type": 2, 
+            "ad_group": 54, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 188, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323132, 
+            "created": "2012-12-04 16:59:44", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:44", 
+            "ad_type": 3, 
+            "ad_group": 54, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 189, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323133, 
+            "created": "2012-12-04 16:59:44", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:44", 
+            "ad_type": 4, 
+            "ad_group": 54, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 190, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323134, 
+            "created": "2012-12-04 16:59:44", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:44", 
+            "ad_type": 1, 
+            "ad_group": 55, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 191, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323135, 
+            "created": "2012-12-04 16:59:44", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:44", 
+            "ad_type": 2, 
+            "ad_group": 55, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 192, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323136, 
+            "created": "2012-12-04 16:59:44", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:44", 
+            "ad_type": 3, 
+            "ad_group": 55, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 429, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302421, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 1, 
+            "ad_group": 106, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 435, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302427, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 3, 
+            "ad_group": 107, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 434, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302426, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 2, 
+            "ad_group": 107, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 433, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302425, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 1, 
+            "ad_group": 107, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 432, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302424, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 4, 
+            "ad_group": 106, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 431, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302423, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 3, 
+            "ad_group": 106, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 430, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302422, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 2, 
+            "ad_group": 106, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 436, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302428, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 1, 
+            "ad_group": 108, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 442, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302434, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 3, 
+            "ad_group": 109, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 441, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302433, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 2, 
+            "ad_group": 109, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 440, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302432, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 1, 
+            "ad_group": 109, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 439, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302431, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 4, 
+            "ad_group": 108, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 438, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302430, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 3, 
+            "ad_group": 108, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 437, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302429, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 2, 
+            "ad_group": 108, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 449, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302441, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 3, 
+            "ad_group": 111, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 444, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302436, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 2, 
+            "ad_group": 110, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 445, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302437, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 3, 
+            "ad_group": 110, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 446, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302438, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 4, 
+            "ad_group": 110, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 447, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302439, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 1, 
+            "ad_group": 111, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 448, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302440, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 2, 
+            "ad_group": 111, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 443, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302435, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 1, 
+            "ad_group": 110, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 456, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302448, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 3, 
+            "ad_group": 113, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 450, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302442, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 1, 
+            "ad_group": 112, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 451, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302443, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 2, 
+            "ad_group": 112, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 452, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302444, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 3, 
+            "ad_group": 112, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 453, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302445, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 4, 
+            "ad_group": 112, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 454, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302446, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 1, 
+            "ad_group": 113, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 455, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302447, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 2, 
+            "ad_group": 113, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 463, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302455, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 115, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 457, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302449, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 1, 
+            "ad_group": 114, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 458, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302450, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 2, 
+            "ad_group": 114, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 459, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302451, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 3, 
+            "ad_group": 114, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 460, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302452, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 4, 
+            "ad_group": 114, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 461, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302453, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 115, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 462, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302454, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 115, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 465, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302457, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 116, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 470, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302465, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 117, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 469, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302463, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 117, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 468, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302461, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 117, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 467, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302460, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 4, 
+            "ad_group": 116, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 466, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302458, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 116, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 464, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302456, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 116, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 471, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302467, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 118, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 472, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302468, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 118, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 473, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302471, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 4, 
+            "ad_group": 118, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 474, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302472, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 119, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 475, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302473, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 119, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 476, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302475, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 119, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 477, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302476, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 120, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 483, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302485, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 121, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 482, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302484, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 121, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 481, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302482, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 121, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 480, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302481, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 4, 
+            "ad_group": 120, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 479, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302479, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 120, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 478, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302478, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 120, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 484, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302486, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 122, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 490, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302492, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 123, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 489, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302491, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 123, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 488, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302490, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 123, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 487, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302489, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 4, 
+            "ad_group": 122, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 486, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302488, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 122, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 485, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302487, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 122, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 491, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 303003, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 124, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 497, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 303010, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 125, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 496, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 303009, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 125, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 495, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 303008, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 125, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 494, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 303007, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 4, 
+            "ad_group": 124, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 493, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 303006, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 124, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 492, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 303004, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 124, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 503, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302498, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 127, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 498, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302493, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 126, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 499, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302494, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 126, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 500, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302495, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 126, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 501, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302496, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 4, 
+            "ad_group": 126, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 502, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302497, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 127, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 504, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302499, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 127, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 505, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302500, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 128, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 506, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302501, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 128, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 507, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302502, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 128, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 508, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302503, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 4, 
+            "ad_group": 128, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 509, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302504, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 129, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 510, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302505, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 129, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 511, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302506, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 129, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 513, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302508, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 2, 
+            "ad_group": 130, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 514, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302509, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 3, 
+            "ad_group": 130, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 515, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302510, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 4, 
+            "ad_group": 130, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 516, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302511, 
+            "created": "2012-12-04 18:29:15", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:15", 
+            "ad_type": 1, 
+            "ad_group": 131, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 517, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302512, 
+            "created": "2012-12-04 18:29:15", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:15", 
+            "ad_type": 2, 
+            "ad_group": 131, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 518, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302513, 
+            "created": "2012-12-04 18:29:15", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:15", 
+            "ad_type": 3, 
+            "ad_group": 131, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 512, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302507, 
+            "created": "2012-12-04 18:29:14", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:14", 
+            "ad_type": 1, 
+            "ad_group": 130, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 520, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302515, 
+            "created": "2012-12-04 18:29:15", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:15", 
+            "ad_type": 2, 
+            "ad_group": 132, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 525, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302520, 
+            "created": "2012-12-04 18:29:15", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:15", 
+            "ad_type": 3, 
+            "ad_group": 133, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 524, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302519, 
+            "created": "2012-12-04 18:29:15", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:15", 
+            "ad_type": 2, 
+            "ad_group": 133, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 523, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302518, 
+            "created": "2012-12-04 18:29:15", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:15", 
+            "ad_type": 1, 
+            "ad_group": 133, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 522, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302517, 
+            "created": "2012-12-04 18:29:15", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:15", 
+            "ad_type": 4, 
+            "ad_group": 132, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 521, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302516, 
+            "created": "2012-12-04 18:29:15", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:15", 
+            "ad_type": 3, 
+            "ad_group": 132, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 519, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302514, 
+            "created": "2012-12-04 18:29:15", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:15", 
+            "ad_type": 1, 
+            "ad_group": 132, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320672, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 2, 
+            "ad_group": 1, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320673, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 3, 
+            "ad_group": 1, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320674, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 4, 
+            "ad_group": 1, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320675, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 1, 
+            "ad_group": 2, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320676, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 2, 
+            "ad_group": 2, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320677, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 3, 
+            "ad_group": 2, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 320671, 
+            "created": "2012-12-04 16:30:59", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:30:59", 
+            "ad_type": 1, 
+            "ad_group": 1, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322880, 
+            "created": "2012-12-04 16:59:08", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:08", 
+            "ad_type": 1, 
+            "ad_group": 5, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322881, 
+            "created": "2012-12-04 16:59:08", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:08", 
+            "ad_type": 2, 
+            "ad_group": 5, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322882, 
+            "created": "2012-12-04 16:59:08", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:08", 
+            "ad_type": 3, 
+            "ad_group": 5, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322883, 
+            "created": "2012-12-04 16:59:08", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:08", 
+            "ad_type": 4, 
+            "ad_group": 5, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322884, 
+            "created": "2012-12-04 16:59:08", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:08", 
+            "ad_type": 1, 
+            "ad_group": 6, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322885, 
+            "created": "2012-12-04 16:59:08", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:08", 
+            "ad_type": 2, 
+            "ad_group": 6, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 322886, 
+            "created": "2012-12-04 16:59:08", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:08", 
+            "ad_type": 3, 
+            "ad_group": 6, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323029, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 3, 
+            "ad_group": 18, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323028, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 2, 
+            "ad_group": 18, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323027, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 1, 
+            "ad_group": 18, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323026, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 4, 
+            "ad_group": 17, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323025, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 3, 
+            "ad_group": 17, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323024, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 2, 
+            "ad_group": 17, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323023, 
+            "created": "2012-12-04 16:59:23", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:23", 
+            "ad_type": 1, 
+            "ad_group": 17, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 197, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323141, 
+            "created": "2012-12-04 16:59:57", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:57", 
+            "ad_type": 1, 
+            "ad_group": 57, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 194, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323138, 
+            "created": "2012-12-04 16:59:57", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:57", 
+            "ad_type": 2, 
+            "ad_group": 56, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 195, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323139, 
+            "created": "2012-12-04 16:59:57", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:57", 
+            "ad_type": 3, 
+            "ad_group": 56, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 196, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323140, 
+            "created": "2012-12-04 16:59:57", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:57", 
+            "ad_type": 4, 
+            "ad_group": 56, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 193, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323137, 
+            "created": "2012-12-04 16:59:57", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:57", 
+            "ad_type": 1, 
+            "ad_group": 56, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 198, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323143, 
+            "created": "2012-12-04 16:59:57", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:57", 
+            "ad_type": 2, 
+            "ad_group": 57, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 199, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 323144, 
+            "created": "2012-12-04 16:59:57", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 16:59:57", 
+            "ad_type": 3, 
+            "ad_group": 57, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 423, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302401, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 2, 
+            "ad_group": 104, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 424, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302402, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 3, 
+            "ad_group": 104, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 425, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302403, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 4, 
+            "ad_group": 104, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 426, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302404, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 1, 
+            "ad_group": 105, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 427, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302405, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 2, 
+            "ad_group": 105, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 428, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302406, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 3, 
+            "ad_group": 105, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 422, 
+        "model": "ad_manager.ad", 
+        "fields": {
+            "ad_id": 302400, 
+            "created": "2012-12-04 18:29:13", 
+            "expiration_date": null, 
+            "notes": "", 
+            "is_active": true, 
+            "modified": "2012-12-04 18:29:13", 
+            "ad_type": 1, 
+            "ad_group": 104, 
+            "publish_date": "2012-12-04"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ad_manager.pagetype", 
+        "fields": {
+            "name": "Section", 
+            "notes": "", 
+            "modified": "2012-12-04 16:30:59", 
+            "slug": "section", 
+            "created": "2012-12-04 16:30:59"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ad_manager.pagetype", 
+        "fields": {
+            "name": "Story", 
+            "notes": "", 
+            "modified": "2012-12-04 16:30:59", 
+            "slug": "story", 
+            "created": "2012-12-04 16:30:59"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ad_manager.adtype", 
+        "fields": {
+            "name": "Leaderboard", 
+            "created": "2012-12-04 16:30:59", 
+            "notes": "", 
+            "modified": "2012-12-04 16:30:59", 
+            "height": 90, 
+            "width": 728, 
+            "tag_type": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ad_manager.adtype", 
+        "fields": {
+            "name": "Leaderboard", 
+            "created": "2012-12-04 16:30:59", 
+            "notes": "", 
+            "modified": "2012-12-04 16:30:59", 
+            "height": 50, 
+            "width": 320, 
+            "tag_type": 1
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ad_manager.adtype", 
+        "fields": {
+            "name": "Medium Rectangle 1", 
+            "created": "2012-12-04 16:30:59", 
+            "notes": "", 
+            "modified": "2012-12-04 16:30:59", 
+            "height": 250, 
+            "width": 300, 
+            "tag_type": 1
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ad_manager.adtype", 
+        "fields": {
+            "name": "Medium Rectangle 2", 
+            "created": "2012-12-04 16:30:59", 
+            "notes": "", 
+            "modified": "2012-12-04 16:30:59", 
+            "height": 250, 
+            "width": 300, 
+            "tag_type": 1
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ad_manager.tagtype", 
+        "fields": {
+            "notes": "", 
+            "modified": "2012-12-04 16:30:59", 
+            "name": "<iframe>", 
+            "created": "2012-12-04 16:30:59"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ad_manager.tagtype", 
+        "fields": {
+            "notes": "", 
+            "modified": "2012-12-05 09:57:32", 
+            "name": "<script>", 
+            "created": "2012-12-05 09:57:32"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ad_manager.tagtype", 
+        "fields": {
+            "notes": "", 
+            "modified": "2012-12-05 09:57:41", 
+            "name": "<img>", 
+            "created": "2012-12-05 09:57:41"
+        }
+    }
+]

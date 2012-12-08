@@ -76,13 +76,13 @@ class Target(Base):
     #----------------------------------
     
     # Meta:
-    slug     = models.SlugField(max_length=255, help_text=_(u'Short descriptive unique name for use in urls.'),)
+    slug = models.SlugField(max_length=255, help_text=_(u'Short descriptive unique name for use in urls.'),)
     
     # Base:
     name = models.CharField(_(u'name'), max_length=200, help_text=_(u'Short descriptive name for this target.'),)
     
     # Foreign keys:
-    parent = models.ForeignKey('self', null=True, blank=True, related_name='child')
+    parent = models.ForeignKey('self', null=True, blank=True, related_name='child',)
     
     #----------------------------------
     # Custom manager attributes:
@@ -287,8 +287,8 @@ class AdGroup(Base):
     aug_id = models.IntegerField(_(u'ad unit group ID'),)
     
     # Foreign keys:
-    page_type = models.ForeignKey('PageType', blank=True, null=True,)
-    target    = models.ForeignKey('Target')
+    page_type = models.ForeignKey('PageType', blank=True, null=True, related_name='ad_group',)
+    target    = models.ForeignKey('Target', related_name='ad_group',)
     
     #----------------------------------
     # Class Meta:
@@ -323,8 +323,8 @@ class Ad(Base):
     publish_date    = models.DateField(_(u'publish date'), default=datetime.date.today, help_text=_(u'The date this ad shall appear online.'),)
     
     # Foreign keys:
-    ad_group = models.ForeignKey('AdGroup',)
-    ad_type  = models.ForeignKey('AdType',)
+    ad_group = models.ForeignKey('AdGroup', related_name='ad',)
+    ad_type  = models.ForeignKey('AdType', related_name='ad',)
     
     #----------------------------------
     # Custom manager attributes:
@@ -412,7 +412,7 @@ class AdType(Base):
     width  = models.IntegerField(_(u'width'),)
     
     # Foreign keys:
-    tag_type = models.ForeignKey('TagType',)
+    tag_type = models.ForeignKey('TagType', related_name='ad_type',)
     
     #----------------------------------
     # Class Meta:

@@ -67,6 +67,6 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         filename = sys.argv[1]
     else:
-        print "Please suplly the name of a .csv file to import. Thanks."
+        print "Please supply the name of a .csv file to import. Thanks."
         sys.exit()
     main(filename)
