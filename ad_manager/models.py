@@ -120,14 +120,17 @@ class Target(Base):
         if self.id:
             
             if self.parent and self.parent_id == self.id:
+                
                 raise forms.ValidationError(_(u'You may not save a target in itself!'))
             
             for p in self._recurse_for_parents(self):
                 
                 if self.id == p.id:
+                    
                     raise forms.ValidationError(_(u'You may not save a target in itself!'))
         
         if not self.slug:
+            
             self.slug = slugify(self.name)
         
         super(Target, self).save(**kwargs) # Call the "real" save()
@@ -142,13 +145,11 @@ class Target(Base):
         
         slug_list = [target.slug for target in parents]
         
-        if slug_list:
-            slug_list = '/'.join(slug_list) + '/'
+        slug_list.append(self.slug)
         
-        else:
-            slug_list = ''
+        slug_list = ':'.join(slug_list) + '/'
         
-        return urlresolvers.reverse('ad_manager_target_detail', kwargs={'parent_slugs' : slug_list, 'slug' : self.slug})
+        return urlresolvers.reverse('ad_manager_target_api', kwargs={'hierarchy' : slug_list,},)
     
     #----------------------------------
     # Custom methods:
@@ -195,9 +196,7 @@ class Target(Base):
     
     def _parents_repr(self):
         
-        """
-        Representation of targets.
-        """
+        "Representation of targets."
         
         name_list = [target.name for target in self._recurse_for_parents(self)]
         
@@ -209,16 +208,16 @@ class Target(Base):
     
     def get_url_name(self):
         
-        """
-        Get all the absolute URLs and names for use in the site navigation.
-        """
+        "Get all the absolute URLs and names for use in the site navigation."
         
         name_list = []
+        
         url_list = []
         
         for target in self._recurse_for_parents(self):
             
             name_list.append(target.name)
+            
             url_list.append(target.get_absolute_url())
         
         name_list.append(self.name)
@@ -231,9 +230,7 @@ class Target(Base):
     
     def _flatten(self, L):
         
-        """
-        Taken from a python newsgroup post.
-        """
+        "Taken from a python newsgroup post."
         
         if type(L) != type([]): return [L]
         
@@ -262,9 +259,7 @@ class Target(Base):
     
     def get_all_children(self, include_self=False):
         
-        """
-        Gets a list of all of the children targets.
-        """
+        "Gets a list of all of the children targets."
         
         children_list = self._recurse_for_children(self)
         

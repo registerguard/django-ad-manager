@@ -1,105 +1,126 @@
-import json
+# http://stackoverflow.com/a/712799/922323
+try: import simplejson as json
+except ImportError: import json
 
 from django import http
-from django.shortcuts import get_object_or_404, render_to_response
-from django.template import RequestContext
-from django.utils.translation import ugettext_lazy as _
+from django.db.models import Q
+from django.shortcuts import get_list_or_404, get_object_or_404, render_to_response
 from django.views.generic.detail import BaseDetailView
 
-from ad_manager.models import *
-from ad_manager.utils import bad_or_missing
+from ad_manager.models import AdGroup, PageType, Target
 
-# https://bitbucket.org/chris1610/satchmo/src/1730bf912bc1/satchmo/apps/product/views/__init__.py?at=default
-# http://www.pioverpi.net/2012/05/14/ajax-json-responses-using-django-class-based-views/
 # https://docs.djangoproject.com/en/1.3/topics/class-based-views/#more-than-just-html
-# http://stackoverflow.com/a/7676907/922323
-# http://stackoverflow.com/a/9492349/922323
-
-def target_list(request, template='ad_manager/target_list.html', root_only=True):
-    
-    """
-    Display all targets.
-    Parameters:
-    - root_only: If true, then only show root targets.
-    """
-    
-    targets = Target.objects.root_targets()
-    
-    context = {
-        'targetlist' : targets,
-    }
-    
-    return render_to_response(template, context_instance=RequestContext(request, context))
-
-def target_detail(request, slug, parent_slugs='', template='ad_manager/target_detail.html'):
-    
-    """
-    Display the target and its child targets.
-    Parameters:
-     - slug: slug of target
-     - parent_slugs: ignored
-    """
-    
-    try:
-        
-        target = Target.objects.get(slug=slug)
-        
-    except Target.DoesNotExist:
-        
-        return bad_or_missing(request, _(u'The target you have requested does not exist.'))
-    
-    child_targets = target.get_all_children()
-    
-    context = {
-        'target': target,
-        'child_targets': child_targets,
-    }
-    
-    return render_to_response(template, context_instance=RequestContext(request, context))
-
-#--------------------------------------------------------------------------
-
 class JSONResponseMixin(object):
     
     def render_to_response(self, context):
         
-        """
-        Returns a JSON response containing 'context' as payload
-        """
+        "Returns a JSON response containing 'context' as payload."
         
         return self.get_json_response(self.convert_context_to_json(context))
     
     def get_json_response(self, content, **httpresponse_kwargs):
         
-        """
-        Construct an `HttpResponse` object.
-        """
+        "Construct an `HttpResponse` object."
         
-        return http.HttpResponse(content, content_type='application/json', **httpresponse_kwargs)
+        callback = self.request.GET.get('callback')
+        
+        if callback:
+            
+            json = '%s(%s)' % (callback, content)
+            
+        else:
+            
+            json = '{' + content + '}'
+        
+        return http.HttpResponse(json, content_type='application/json', **httpresponse_kwargs)
     
     def convert_context_to_json(self, context):
         
-        """
-        Convert the context dictionary into a JSON object
-        """
+        "Convert the context dictionary into a JSON object."
         
         # Note: This is *EXTREMELY* naive; in reality, you'll need
         # to do much more complex handling to ensure that arbitrary
         # objects -- such as Django model instances or querysets
         # -- can be serialized as JSON.
         
-        return json.dumps(context)
+        return json.dumps(context, indent=4)
 
 class Api(JSONResponseMixin, BaseDetailView):
     
-    def get(self, request, parent=None, child=None, page=None, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
         
-        # Do some queries here to collect your data for the response:
+        hierarchy = self.kwargs['hierarchy']
         
-        context = {
-            'parent': parent,
-            'child': child,
-            'page': page,
-        }
+        page = kwargs.get('page', None)
         
-        return self.render_to_response(context)
+        target_slugs = hierarchy.strip('/').split(':')
+        
+        targets = []
+        
+        for slug in target_slugs:
+            
+            if not targets:
+                
+                parent = None
+                
+            else:
+                
+                parent = targets[-1]
+            
+            target = get_object_or_404(Target, slug__iexact=slug, parent=parent,)
+            
+            targets.append(target)
+        
+        target = targets[-1]
+        
+        ad_groups = AdGroup.objects.filter(target=target)
+        
+        if not ad_groups:
+            
+            raise http.Http404
+        
+        if page:
+            
+            page_type = get_object_or_404(PageType, slug__iexact=page)
+            
+            ad_groups = ad_groups.filter(page_type=page_type)
+        
+        data = [
+            {
+                'target': [
+                    {
+                        'callback': request.GET.get('callback'),
+                        'name': target.name,
+                        'ad_group': [
+                            {
+                                'aug_id': ad_group.aug_id,
+                                'page_type': [
+                                    {
+                                        'name': ad_group.page_type.name,
+                                    }
+                                ],
+                                'ad': [
+                                    {
+                                        'id': ad.ad_id,
+                                        'ad_type': [
+                                            {
+                                                'name': ad.ad_type.name,
+                                                'width': ad.ad_type.width,
+                                                'height': ad.ad_type.height,
+                                                'tag_type': [
+                                                    {
+                                                        'name': ad.ad_type.tag_type.name,
+                                                    }
+                                                ],
+                                            }
+                                        ],
+                                    } for ad in ad_group.ad.active()
+                                ],
+                            } for ad_group in ad_groups
+                        ],
+                    }
+                ]
+            }
+        ]
+        
+        return self.render_to_response(data)
