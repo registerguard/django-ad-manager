@@ -3,11 +3,7 @@
 import csv
 import sys
 from django.template.defaultfilters import slugify
-from os import environ
 
-sys.path.append('/rgcalendar/oper')
-sys.path.append('/rgcalendar/oper/projects_root')
-environ['DJANGO_SETTINGS_MODULE'] = 'projects_root.settings'
 from ad_manager.models import Ad, AdGroup, AdType, PageType, TagType, Target
 
 def main(filename):
