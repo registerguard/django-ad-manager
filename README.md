@@ -10,6 +10,12 @@ More information coming soon.
 
 ---
 
+#### SCHEMA
+
+[![schema](https://raw.github.com/registerguard/django-ad-manager/master/ad_manager/ad_manager.png)](https://raw.github.com/registerguard/django-ad-manager/master/ad_manager/ad_manager.png)
+
+---
+
 #### LEGAL
 
 Copyright © 2012 [Micky Hulse](http://hulse.me)/[The Register-Guard](http://registerguard.com)
