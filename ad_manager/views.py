@@ -1,104 +1,164 @@
-# http://stackoverflow.com/a/712799/922323
-try: import simplejson as json
-except ImportError: import json
+import datetime
 
 from django import http
-from django.db.models import Q
-from django.shortcuts import get_list_or_404, get_object_or_404, render_to_response
+from django.core.cache import cache
+from django.shortcuts import render_to_response
+from django.utils.translation import ugettext_lazy as _
 from django.views.generic.detail import BaseDetailView
 
+from ad_manager.mixins import JSONResponseMixin
 from ad_manager.models import AdGroup, PageType, Target
+from ad_manager.utils import bad_or_missing # Seems a tad better than get_object_or_404 from from django.shortcuts.
 
-# https://docs.djangoproject.com/en/1.3/topics/class-based-views/#more-than-just-html
-class JSONResponseMixin(object):
-    
-    def render_to_response(self, context):
-        
-        "Returns a JSON response containing 'context' as payload."
-        
-        return self.get_json_response(self.convert_context_to_json(context))
-    
-    def get_json_response(self, content, **httpresponse_kwargs):
-        
-        "Construct an `HttpResponse` object."
-        
-        callback = self.request.GET.get('callback')
-        
-        if callback:
-            
-            json = '%s(%s)' % (callback, content)
-            
-        else:
-            
-            json = '{' + content + '}'
-        
-        return http.HttpResponse(json, content_type='application/json', **httpresponse_kwargs)
-    
-    def convert_context_to_json(self, context):
-        
-        "Convert the context dictionary into a JSON object."
-        
-        # Note: This is *EXTREMELY* naive; in reality, you'll need
-        # to do much more complex handling to ensure that arbitrary
-        # objects -- such as Django model instances or querysets
-        # -- can be serialized as JSON.
-        
-        return json.dumps(context, indent=4)
+# http://stackoverflow.com/questions/13180876/how-do-i-render-a-cached-jsonp-view-in-django
+# http://stackoverflow.com/questions/5940856/python-using-args-kwargs-in-wrapper-functions
+# https://github.com/mhulse/django-purr
+
+CACHE_NAME = 'ad_manager_api'
+
+"""
+Renders JSON or JSONP to the view.
+
+Example usage:
+
+urlpatterns = patterns('',
+    url(r'^(?P<hierarchy>[-\w:]+)/?(?P<page>[-\w]+)?/$', Api.as_view(), name='ad_manager_target_api',),
+)
+"""
 
 class Api(JSONResponseMixin, BaseDetailView):
     
+    # Override `BaseDetailView`'s `get()` method:
     def get(self, request, *args, **kwargs):
         
-        hierarchy = self.kwargs['hierarchy']
+        """
+        Handler for GET requests.
         
-        page = kwargs.get('page', None)
+        This retrieves the object from the database and calls the
+        `render_to_response` with the retrieved object in the `context` data.
         
-        target_slugs = hierarchy.strip('/').split(':')
+        Returns:
+        Ouput of `render_to_response` method implementation.
+        """
         
-        targets = []
+        # Cached JSON?
+        data_cached = cache.get('ad_manager_api')
         
-        for slug in target_slugs:
+        # Check if JSON is cached OR if we want to force-update the cache:
+        if (data_cached is None) or (request.GET.get('cache') == 'busted'):
             
-            if not targets:
+            #----------------------------------
+            # Setup:
+            #----------------------------------
+            
+            # Get `hierarchy` `kwarg` from url:
+            hierarchy = self.kwargs['hierarchy'] # Example: /foo:baz:bar:bing/
+            
+            # Get `page`:
+            page = kwargs.get('page', None)
+            
+            # Clean up slashes and convert to a list:
+            target_slugs = hierarchy.strip('/').split(':')
+            
+            # Initialize `targets` list:
+            targets = []
+            
+            #----------------------------------
+            # Check and get targets:
+            #----------------------------------
+            
+            # Pull `slug`s from list: 
+            for slug in target_slugs:
                 
-                parent = None
+                # Check for `parent`:
+                if not targets:
+                    
+                     # There's no `parent`:
+                    parent = None
+                    
+                else:
+                    
+                    # Set `parent` to the next `target` object:
+                    parent = targets[-1]
                 
-            else:
+                # Play it safe:
+                try:
+                    
+                    # Get the `target` object:
+                    target = Target.objects.get(slug__iexact=slug, parent=parent,)
+                    
+                # Can we continue?
+                except Target.DoesNotExist:
+                    
+                    # Bad or missing `Target` request:
+                    return bad_or_missing(request, _(u'The target you have requested does not exist.'))
                 
-                parent = targets[-1]
+                # Append the `target` object to the `target` list:
+                targets.append(target)
             
-            target = get_object_or_404(Target, slug__iexact=slug, parent=parent,)
+            # Get the last `target`:
+            target = targets[-1]
             
-            targets.append(target)
-        
-        target = targets[-1]
-        
-        ad_groups = AdGroup.objects.filter(target=target)
-        
-        if not ad_groups:
+            #----------------------------------
+            # Get ad groups:
+            #----------------------------------
             
-            raise http.Http404
-        
-        if page:
+            # Filter `AdGroup` based on `target`:
+            ad_groups = AdGroup.objects.filter(target=target)
+                
+            # Can we continue?
+            if not ad_groups:
+                
+                # Bad or missing `AdGroup` request:
+                return bad_or_missing(request, _(u'The ad group you have requested does not exist.'))
             
-            page_type = get_object_or_404(PageType, slug__iexact=page)
+            #----------------------------------
+            # Get page type:
+            #----------------------------------
             
-            ad_groups = ad_groups.filter(page_type=page_type)
-        
-        data = [
-            {
+            # If `page` was included in the URI:
+            if page:
+                
+                # Play it safe:
+                try:
+                    
+                    # Filter `PageType` based on `page` slug:
+                    page_type = PageType.objects.get(slug__iexact=page,)
+                    
+                # Can we continue?
+                except PageType.DoesNotExist:
+                    
+                    # Bad or missing `PageType` request:
+                    return bad_or_missing(request, _(u'The page type you have requested does not exist.'))
+                
+                # Filter `AdGroup` queryset based on `page_type` object: 
+                ad_groups = ad_groups.filter(page_type=page_type)
+                    
+                # Can we continue?
+                if not ad_groups:
+                    
+                    # Bad or missing `AdGroup`s request:
+                    return bad_or_missing(request, _(u'The ad group and page type you have requested do not exist.'))
+            
+            #----------------------------------
+            # Loops:
+            #----------------------------------
+            
+            # Build data dict:
+            data = {
+                
+                # Boilerplate:
+                'now': str(datetime.datetime.now()),     # For debug/cache purposes.
+                'callback': request.GET.get('callback'), # The callback.
+                
+                # Showtime:
                 'target': [
                     {
-                        'callback': request.GET.get('callback'),
                         'name': target.name,
                         'ad_group': [
                             {
                                 'aug_id': ad_group.aug_id,
-                                'page_type': [
-                                    {
-                                        'name': ad_group.page_type.name,
-                                    }
-                                ],
+                                'page_type': ad_group.page_type.name,
                                 'ad': [
                                     {
                                         'id': ad.ad_id,
@@ -107,11 +167,7 @@ class Api(JSONResponseMixin, BaseDetailView):
                                                 'name': ad.ad_type.name,
                                                 'width': ad.ad_type.width,
                                                 'height': ad.ad_type.height,
-                                                'tag_type': [
-                                                    {
-                                                        'name': ad.ad_type.tag_type.name,
-                                                    }
-                                                ],
+                                                'tag_type': ad.ad_type.tag_type.name,
                                             }
                                         ],
                                     } for ad in ad_group.ad.active()
@@ -119,8 +175,18 @@ class Api(JSONResponseMixin, BaseDetailView):
                             } for ad_group in ad_groups
                         ],
                     }
-                ]
+                ],
+                
             }
-        ]
-        
-        return self.render_to_response(data)
+            
+            #----------------------------------
+            # Returns:
+            #----------------------------------
+            
+            # JSON isn't cached OR we want to force-update: 
+            return self.render_to_response(data) # Render to `JSONResponseMixin.render_to_response()`.
+            
+        else:
+            
+            # JSON is cached and we don't want to force-update:
+            return self.render_to_response(data_cached, True)

@@ -7,8 +7,8 @@ from ad_manager.views import Api
 
 urlpatterns = patterns('',
     
+    # Possible examples:
     # "/grand-parent:parent:child/page-type" OR "/parent:child/page-type" OR "/child/page-type" OR "/child"
-    
     url(
         r'^(?P<hierarchy>[-\w:]+)/?(?P<page>[-\w]+)?/$',
         Api.as_view(),

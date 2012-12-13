@@ -71,6 +71,9 @@ class Base(models.Model):
 
 class Target(Base):
     
+    # @TODO: Remove superflous methods.
+    # @TODO: Document methods better.
+    
     #----------------------------------
     # All database fields:
     #----------------------------------
@@ -180,14 +183,17 @@ class Target(Base):
         if target_obj.parent_id:
             
             p = target_obj.parent
+            
             p_list.append(p)
             
             if p != self:
                 
                 more = self._recurse_for_parents(p)
+                
                 p_list.extend(more)
         
         if target_obj == self and p_list:
+            
             p_list.reverse()
         
         return p_list
@@ -251,6 +257,7 @@ class Target(Base):
             if child != self:
                 
                 children_list = self._recurse_for_children(child)
+                
                 children.append(children_list)
         
         return children
@@ -264,8 +271,11 @@ class Target(Base):
         children_list = self._recurse_for_children(self)
         
         if include_self:
+            
             ix = 0
+            
         else:
+            
             ix = 1
         
         flat_list = self._flatten(children_list[ix:])
