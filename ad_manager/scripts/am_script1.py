@@ -11,7 +11,7 @@ from ad_manager.models import Target as t
 # http://blog.brendel.com/2012/01/how-to-use-djangextensions-runscript.html
 # http://blog.leahculver.com/2008/08/python-dir-is-my-fav-debugging-thing-ever.html
 
-# $ python manage.py runscript ad_manager
+# $ python manage.py runscript am_script2
 
 def run():
     

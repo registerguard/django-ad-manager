@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 import csv
 import sys
 from django.template.defaultfilters import slugify

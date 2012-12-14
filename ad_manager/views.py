@@ -3,18 +3,19 @@ import datetime
 from django import http
 from django.core.cache import cache
 from django.shortcuts import render_to_response
+from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic.detail import BaseDetailView
 
-from ad_manager.mixins import JSONResponseMixin
+from ad_manager.mixins.views import JSONResponseMixin
 from ad_manager.models import AdGroup, PageType, Target
 from ad_manager.utils import bad_or_missing # Seems a tad better than get_object_or_404 from from django.shortcuts.
 
 # http://stackoverflow.com/questions/13180876/how-do-i-render-a-cached-jsonp-view-in-django
 # http://stackoverflow.com/questions/5940856/python-using-args-kwargs-in-wrapper-functions
 # https://github.com/mhulse/django-purr
-
-CACHE_NAME = 'ad_manager_api'
+# http://strftime.org/
+# https://gist.github.com/4279705
 
 """
 Renders JSON or JSONP to the view.
@@ -41,31 +42,34 @@ class Api(JSONResponseMixin, BaseDetailView):
         Ouput of `render_to_response` method implementation.
         """
         
+        #----------------------------------
+        # Setup:
+        #----------------------------------
+        
+        # Get `hierarchy` `kwarg` from url:
+        hierarchy = self.kwargs['hierarchy'].strip('/') # Example: foo:baz:bar:bing
+        
+        # Get `page`:
+        page = kwargs.get('page', None)
+        
+        # Create/set the `cache_key`:
+        self.cache_key = 'ad_manager_api_%s%s%s' % (hierarchy,  (':' if page else ''), page)
+        
         # Cached JSON?
-        data_cached = cache.get('ad_manager_api')
+        data_cached = cache.get(self.cache_key)
         
         # Check if JSON is cached OR if we want to force-update the cache:
         if (data_cached is None) or (request.GET.get('cache') == 'busted'):
             
             #----------------------------------
-            # Setup:
+            # Check and get targets:
             #----------------------------------
             
-            # Get `hierarchy` `kwarg` from url:
-            hierarchy = self.kwargs['hierarchy'] # Example: /foo:baz:bar:bing/
-            
-            # Get `page`:
-            page = kwargs.get('page', None)
-            
             # Clean up slashes and convert to a list:
-            target_slugs = hierarchy.strip('/').split(':')
+            target_slugs = hierarchy.split(':')
             
             # Initialize `targets` list:
             targets = []
-            
-            #----------------------------------
-            # Check and get targets:
-            #----------------------------------
             
             # Pull `slug`s from list: 
             for slug in target_slugs:
@@ -148,13 +152,13 @@ class Api(JSONResponseMixin, BaseDetailView):
             data = {
                 
                 # Boilerplate:
-                'now': str(datetime.datetime.now()),     # For debug/cache purposes.
-                'callback': request.GET.get('callback'), # The callback.
+                'now': str(datetime.datetime.now().strftime("%Y-%m-%d %I:%M")), # For debug/cache purposes.
                 
                 # Showtime:
                 'target': [
                     {
                         'name': target.name,
+                        'slug': slugify(target.name),
                         'ad_group': [
                             {
                                 'aug_id': ad_group.aug_id,
@@ -165,6 +169,7 @@ class Api(JSONResponseMixin, BaseDetailView):
                                         'ad_type': [
                                             {
                                                 'name': ad.ad_type.name,
+                                                'slug': slugify(ad.ad_type.name),
                                                 'width': ad.ad_type.width,
                                                 'height': ad.ad_type.height,
                                                 'tag_type': ad.ad_type.tag_type.name,
@@ -188,5 +193,8 @@ class Api(JSONResponseMixin, BaseDetailView):
             
         else:
             
+            # We're already cached; update `cache_exists` property:
+            self.cache_exists = True
+            
             # JSON is cached and we don't want to force-update:
-            return self.render_to_response(data_cached, True)
+            return self.render_to_response(data_cached)
