@@ -31,7 +31,7 @@ http://site.com/manager/entertainment:go-entertainment/section/?callback=baz
 * <b>`manager`:</b> Django application name.
 * <b>`entertainment:go-entertainment`:</b> Are `target` names (i.e. website sections and sub-sections) seperated by a colon. Minimum of one `target` required.
 * <b>`section`:</b> Optional page type. If not defined, then all page types (for the group) are output.
-* <b>`?callback=baz`:</b> JSONP `callback` name.
+* <b>`?callback=baz`:</b> JSONP `callback` name. If not defined, then the output will be a standard [JSON](http://www.json.org/) response.
 * <b>`&cache=busted`:</b> Used to bust the Django `cache` (not shown in above exmaple).
 
 ##### [JSONP](http://en.wikipedia.org/wiki/JSONP) output:
@@ -175,8 +175,6 @@ baz({
     ]
 });
 ```
-
-If `callback` URI parameter is not specified, then the output will be a standard [JSON](http://www.json.org/) response.
 
 ---
 
