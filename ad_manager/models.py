@@ -15,6 +15,7 @@ from ad_manager import managers
 # https://bitbucket.org/chris1610/satchmo/src/1730bf912bc1/satchmo/apps/product/models.py?at=default
 # http://thefekete.net/blog/sorting-hierarchical-categories-in-django/
 # https://docs.djangoproject.com/en/1.4/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display
+# https://groups.google.com/d/topic/django-users/x2ibSNkW5Ns/discussion
 
 """
     Notes to (future) self:
@@ -309,9 +310,7 @@ class AdGroup(Base):
     
     def __unicode__(self):
         
-        #return _(u'%s') % ' | '.join(filter(None, (self.target, str(self.page_type))))
-        
-        return _(u'%s%s%s') % (self.target, (' | ' if self.page_type else ''), self.page_type)
+        return ' | '.join ([unicode(x) for x in (self.target, getattr(self, 'page_type', None)) if x is not None])
 
 class Ad(Base):
     
