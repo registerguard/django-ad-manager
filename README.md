@@ -28,11 +28,11 @@ http://site.com/manager/entertainment:go-entertainment/section/?callback=baz
 
 ##### Where:
 
-* __`manager`:__ Django application name.
-* __`entertainment:go-entertainment`:__ Are `target` names (i.e. website sections and sub-sections) seperated by a colon. Minimum of one `target` required.
-* __`section`:__ Optional page type. If not defined, then all page types (for the group) are output.
-* __`?callback=baz`:__ JSONP `callback` name.
-* __`&cache=busted`:__ Used to bust the Django `cache` (not shown in above exmaple).
+__`manager`:__ Django application name.
+__`entertainment:go-entertainment`:__ Are `target` names (i.e. website sections and sub-sections) seperated by a colon. Minimum of one `target` required.
+__`section`:__ Optional page type. If not defined, then all page types (for the group) are output.
+__`?callback=baz`:__ JSONP `callback` name.
+__`&cache=busted`:__ Used to bust the Django `cache` (not shown in above exmaple).
 
 ##### [JSONP](http://en.wikipedia.org/wiki/JSONP) output:
 
