@@ -26,6 +26,14 @@ More information coming soon.
 http://site.com/manager/entertainment:go-entertainment/section/?callback=baz
 ```
 
+##### Where:
+
+* `manager` = app name.
+* `entertainment` and `go-entertainment` = `target` names (i.e. website sections and sub-sections); `targets` are seperated by `:`; minimum of one `target` required.
+* `section` = page type (optional); we use `section` and `story` (i.e. `section` fronts and `story` page types). If `section` is not defined, then all page types, for the group, are returned.
+* `?callback=baz` = JSONP `callback` name.
+* `&cache=busted` = Used to bust `cache` (not shown in above exmaple).
+
 ##### [JSONP](http://en.wikipedia.org/wiki/JSONP) output:
 
 ```javascript
