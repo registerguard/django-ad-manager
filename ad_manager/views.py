@@ -62,6 +62,25 @@ class Api(JSONResponseMixin, BaseDetailView):
         if (data_cached is None) or (request.GET.get('cache') == 'busted'):
             
             #----------------------------------
+            # Get global ROS (Run of Site) ads:
+            #----------------------------------
+            
+            # Play it safe:
+            try:
+                
+                # Get the `target_ros` object:
+                target_ros = Target.objects.get(slug__iexact='ros')
+                
+            # Can we continue?
+            except Target.DoesNotExist:
+                
+                # Return `None`:
+                target_ros = None
+            
+            # Filter `AdGroup` based on `target_ros`:
+            ad_groups_ros = AdGroup.objects.filter(target=target_ros) # No AdGroups == [].
+            
+            #----------------------------------
             # Check and get targets:
             #----------------------------------
             
@@ -145,42 +164,83 @@ class Api(JSONResponseMixin, BaseDetailView):
                     return bad_or_missing(request, _(u'The ad group and page type you have requested do not exist.'))
             
             #----------------------------------
-            # Loops:
+            # Build `data` dict guts:
             #----------------------------------
             
-            # Build data dict:
+            # Initialize `target_list` list:
+            target_list = []
+            
+            # Section-specific ads:
+            target_list.append ({
+                
+                'name': target.name,
+                'slug': slugify(target.name),
+                'ad_group': [
+                    {
+                        'aug_id': ad_group.aug_id,
+                        'page_type': getattr(ad_group.page_type, 'name', ''),
+                        'ad': [
+                            {
+                                'id': ad.ad_id,
+                                'ad_type': [
+                                    {
+                                        'name': ad.ad_type.name,
+                                        'slug': slugify(ad.ad_type.name),
+                                        'width': ad.ad_type.width,
+                                        'height': ad.ad_type.height,
+                                        'tag_type': ad.ad_type.tag_type.name,
+                                    }
+                                ],
+                            } for ad in ad_group.ad.active()
+                        ],
+                    } for ad_group in ad_groups
+                ],
+                
+            })
+            
+            # Don't show ROS if the above is ROS:
+            if target_ros != target:
+                
+                # Global ROS:
+                target_list.append({
+                    
+                    'name': target_ros.name,
+                    'slug': slugify(target_ros.name),
+                    'ad_group': [
+                        {
+                            'aug_id': ad_group.aug_id,
+                            'page_type': getattr(ad_group.aug_id, 'name', ''),
+                            'ad': [
+                                {
+                                    'id': ad.ad_id,
+                                    'ad_type': [
+                                        {
+                                            'name': ad.ad_type.name,
+                                            'slug': slugify(ad.ad_type.name),
+                                            'width': ad.ad_type.width,
+                                            'height': ad.ad_type.height,
+                                            'tag_type': ad.ad_type.tag_type.name,
+                                        }
+                                    ],
+                                } for ad in ad_group.ad.active()
+                            ],
+                        } for ad_group in ad_groups_ros
+                    ],
+                    
+                })
+            
+            #----------------------------------
+            # Build `data` dict:
+            #----------------------------------
+            
+            # Initialize and build:
             data = {
                 
                 # Boilerplate:
                 'now': str(datetime.datetime.now().strftime("%Y-%m-%d %I:%M")), # For debug/cache purposes.
                 
                 # Showtime:
-                'target': [
-                    {
-                        'name': target.name,
-                        'slug': slugify(target.name),
-                        'ad_group': [
-                            {
-                                'aug_id': ad_group.aug_id,
-                                'page_type': getattr(ad_group.page_type, 'name', ''),
-                                'ad': [
-                                    {
-                                        'id': ad.ad_id,
-                                        'ad_type': [
-                                            {
-                                                'name': ad.ad_type.name,
-                                                'slug': slugify(ad.ad_type.name),
-                                                'width': ad.ad_type.width,
-                                                'height': ad.ad_type.height,
-                                                'tag_type': ad.ad_type.tag_type.name,
-                                            }
-                                        ],
-                                    } for ad in ad_group.ad.active()
-                                ],
-                            } for ad_group in ad_groups
-                        ],
-                    }
-                ],
+                'target': target_list,
                 
             }
             

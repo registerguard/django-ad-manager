@@ -32,6 +32,15 @@ class JSONResponseMixin(object):
     # Unique cache key string:
     cache_key = None
     
+    # If `True`, then output of dictionaries will be sorted by key:
+    json_sort_keys = True # Default: False
+    
+    # JSON array elements and object members will be pretty-printed at this indent level:
+    json_indent = 4 # Default: None
+    
+    # Control trailing whitespace when indent is specified:
+    json_separators = (',', ': ') # Default: (', ', ': ')
+    
     #----------------------------------
     # Methods:
     #----------------------------------
@@ -84,7 +93,7 @@ class JSONResponseMixin(object):
         try:
             
             # Serialize `context` to a JSON formatted string:
-            jsonstring = json.dumps(context, sort_keys=True, indent=4, separators=(',', ': '))
+            json_string = json.dumps(context, sort_keys=self.json_sort_keys, indent=self.json_indent, separators=self.json_separators)
             
         # Doh!
         except TypeError:
@@ -96,7 +105,7 @@ class JSONResponseMixin(object):
         if self.cache_key:
             
             # Set the `cache`:
-            cache.set(self.cache_key, jsonstring, self.cache_timeout)
+            cache.set(self.cache_key, json_string, self.cache_timeout)
         
         # Return the serialized JSON string:
-        return jsonstring
+        return json_string
