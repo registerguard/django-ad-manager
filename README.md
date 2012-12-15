@@ -1,6 +1,6 @@
 # Django Ad Manager (BETA)
 
-### Django app to help manage, schedule and control OpenX ads, on an responsive web page, from one server to another.
+### Application that helps to manage, schedule and control [OpenX](http://www.openx.com/) ads from one server to another; intended for use on responsive webpages.
 
 More information coming soon.
 
