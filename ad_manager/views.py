@@ -179,7 +179,7 @@ class Api(JSONResponseMixin, BaseDetailView):
             target_list = []
             
             # Section-specific ads:
-            target_list.append(self._build_dict(target_ros, ad_groups_ros))
+            target_list.append(self._build_dict(target, ad_groups))
             
             # Don't show ROS if the above is ROS:
             if target_ros and (target_ros != target) and ad_groups_ros:
