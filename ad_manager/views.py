@@ -71,14 +71,22 @@ class Api(JSONResponseMixin, BaseDetailView):
                 # Get the `target_ros` object:
                 target_ros = Target.objects.get(slug__iexact='ros')
                 
-            # Can we continue?
+            # Any ROS?
             except Target.DoesNotExist:
                 
                 # Return `None`:
                 target_ros = None
-            
-            # Filter `AdGroup` based on `target_ros`:
-            ad_groups_ros = AdGroup.objects.filter(target=target_ros) # No AdGroups == [].
+                
+            # Filter AdGroup?
+            if target_ros:
+                
+                # Filter `AdGroup` based on `target_ros`:
+                ad_groups_ros = AdGroup.objects.filter(target=target_ros) # No AdGroups == [].
+                
+            # No ROS:
+            else:
+                
+                ad_groups_ros = None
             
             #----------------------------------
             # Check and get targets:
@@ -171,63 +179,13 @@ class Api(JSONResponseMixin, BaseDetailView):
             target_list = []
             
             # Section-specific ads:
-            target_list.append ({
-                
-                'name': target.name,
-                'slug': slugify(target.name),
-                'ad_group': [
-                    {
-                        'aug_id': ad_group.aug_id,
-                        'page_type': getattr(ad_group.page_type, 'name', ''),
-                        'ad': [
-                            {
-                                'id': ad.ad_id,
-                                'ad_type': [
-                                    {
-                                        'name': ad.ad_type.name,
-                                        'slug': slugify(ad.ad_type.name),
-                                        'width': ad.ad_type.width,
-                                        'height': ad.ad_type.height,
-                                        'tag_type': ad.ad_type.tag_type.name,
-                                    }
-                                ],
-                            } for ad in ad_group.ad.active()
-                        ],
-                    } for ad_group in ad_groups
-                ],
-                
-            })
+            target_list.append(self._build_dict(target_ros, ad_groups_ros))
             
             # Don't show ROS if the above is ROS:
-            if target_ros != target:
+            if target_ros and (target_ros != target) and ad_groups_ros:
                 
                 # Global ROS:
-                target_list.append({
-                    
-                    'name': target_ros.name,
-                    'slug': slugify(target_ros.name),
-                    'ad_group': [
-                        {
-                            'aug_id': ad_group.aug_id,
-                            'page_type': getattr(ad_group.aug_id, 'name', ''),
-                            'ad': [
-                                {
-                                    'id': ad.ad_id,
-                                    'ad_type': [
-                                        {
-                                            'name': ad.ad_type.name,
-                                            'slug': slugify(ad.ad_type.name),
-                                            'width': ad.ad_type.width,
-                                            'height': ad.ad_type.height,
-                                            'tag_type': ad.ad_type.tag_type.name,
-                                        }
-                                    ],
-                                } for ad in ad_group.ad.active()
-                            ],
-                        } for ad_group in ad_groups_ros
-                    ],
-                    
-                })
+                target_list.append(self._build_dict(target_ros, ad_groups_ros))
             
             #----------------------------------
             # Build `data` dict:
@@ -258,3 +216,46 @@ class Api(JSONResponseMixin, BaseDetailView):
             
             # JSON is cached and we don't want to force-update:
             return self.render_to_response(data_cached)
+    
+    # http://www.network-theory.co.uk/docs/pytut/DefaultArgumentValues.html
+    def _build_dict(self, target=None, ad_groups=None):
+        
+        "Private helper method that helps to build the data dict."
+        
+        # Needed?
+        if target and ad_groups:
+            
+            # Retun the data dict:
+            return {
+                
+                'name': target.name,
+                'slug': slugify(target.name),
+                'ad_group': [
+                    {
+                        'aug_id': ad_group.aug_id,
+                        'page_type': getattr(ad_group.aug_id, 'name', ''),
+                        'ad': [
+                            {
+                                'id': ad.ad_id,
+                                'ad_type': [
+                                    {
+                                        'name': ad.ad_type.name,
+                                        'slug': slugify(ad.ad_type.name),
+                                        'width': ad.ad_type.width,
+                                        'height': ad.ad_type.height,
+                                        'tag_type': ad.ad_type.tag_type.name,
+                                    }
+                                ],
+                            } for ad in ad_group.ad.active()
+                        ],
+                    } for ad_group in ad_groups
+                ],
+                
+            }
+            
+        # Return something:
+        else:
+            
+            # Return and empty dict:
+            return {} # Is this the best way to do this?
+
