@@ -24,7 +24,6 @@ class TargetAdminForm(models.ModelForm):
     object at this point, not the original string submitted in the form (it
     will be in `cleaned_data` because the general field `clean()` method,
     above, has already cleaned the data once).
-    
     """
     
     def clean_parent(self):
