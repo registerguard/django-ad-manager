@@ -362,7 +362,7 @@ class Ad(Base):
         if self.pk:
             
             # Mark the page as inactive if it's expired and still active:
-            if self.expiration_date and self.expiration_date <= datetime.datetime.now() and self.is_active:
+            if self.expiration_date and self.expiration_date <= datetime.date.today() and self.is_active:
                 
                 self.is_active = False
                 
