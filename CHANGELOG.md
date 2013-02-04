@@ -1,9 +1,12 @@
 # Changelog
 
-## vX.X.X
-#### Mmmmm [D]D, YYYY
+## v1.0.0
+#### February 3, 2013
 
-* ...
+* Added related static files:
+	* Ad manager JS.
+	* Ad css.
+	* Demo files.
 
 ---
 
@@ -19,5 +22,12 @@
 #### December 3, 2012
 
 * Initial public (beta) release to GitHub.
+
+---
+
+## vX.X.X
+#### Mmmmm [D]D, YYYY
+
+* ...
 
 ---
