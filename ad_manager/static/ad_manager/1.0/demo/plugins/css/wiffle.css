@@ -1,14 +1,14 @@
-/**
+/*!
  * Wiffle = ((640 - 3x) / 4)
  * A "responsive" grid system based on Frameless, OOCSS Grids and Standard Advertising Units.
  *
  * @author Micky Hulse
  * @link http://hulse.me
  * @docs https://github.com/registerguard/wiffle
- * @copyright (c) 2012 Micky Hulse/The Register-Guard
- * @license Apache License, Version 2.0.
- * @version v4.0.0
- * @date 10/29/2012
+ * @copyright Copyright (c) 2013 Micky Hulse.
+ * @license Released under the Apache License, Version 2.0.
+ * @version 4.1.0
+ * @date 2013/02/17
  */
 
 /* ==========================================================================

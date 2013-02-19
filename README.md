@@ -1,8 +1,8 @@
 # Django Ad Manager (BETA)
 
-### Application that helps to manage, schedule and control [OpenX](http://www.openx.com/) ads from one server to another; intended for use on responsive webpages.
+### An application that helps to manage, schedule and control [OpenX](http://www.openx.com/) ads from one server to another; intended for use on responsive webpages.
 
-More information coming soon.
+Tested and working with Djago 1.3.
 
 ---
 
@@ -178,9 +178,51 @@ baz({
 
 ---
 
+#### INSTALLATION
+
+Install using [`pip`](http://www.pip-installer.org/):
+
+```bash
+$ sudo pip install -e git+https://github.com/registerguard/django-ad-manager.git#egg=django-ad-manager
+```
+
+Add `'ad_manager',` to your `installed_apps` setting.
+
+Put this in your URLs:
+
+```python
+(r'^pages/', include('ad_manager.urls')),
+```
+
+Run:
+
+```bash
+$ sudo service apache2 restart
+```
+
+... or:
+
+```bash
+$ touch apache/django.wsgi
+```
+
+... or whatever you need to do to reload things.
+
+Lastly:
+
+```bash
+$ python manage.py syncdb
+```
+
+... and you're ready to go (maybe do another `touch`?)!
+
+Enjoy your **Django Ad Manager** app _today!_
+
+---
+
 #### LEGAL
 
-Copyright © 2012 [Micky Hulse](http://hulse.me)/[The Register-Guard](http://registerguard.com)
+Copyright &copy; 2013 [Micky Hulse](http://hulse.me)/[The Register-Guard](http://registerguard.com)
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 
