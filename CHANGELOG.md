@@ -1,6 +1,15 @@
 # Changelog
 
 ## v1.0.0
+
+#### February 26, 2013
+
+* Updated `CHANGELOG.md`.
+* Changed JSON cache time to 12 hours.
+* Removed all CSV files.
+	* Added `.csv` to `.gitignore`.
+* Looks like some line endings changed.
+
 #### February 18, 2013
 
 * Update `CHANGELOG.md`.
