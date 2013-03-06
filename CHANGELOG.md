@@ -2,6 +2,14 @@
 
 ## v1.0.0
 
+#### March 6, 2013
+
+* Changed `half_page` to `button_2` (needed for GO widget size change).
+* Changed `button` to `button_1`.
+* Tweaked some demo files.
+* Updated the `ad_manager.js` to account for name changes above.
+* Added to `.gitignore`: Ignoring `/fixtures` and `*.csv`.
+
 #### February 26, 2013
 
 * Updated `CHANGELOG.md`.

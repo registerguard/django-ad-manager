@@ -44,14 +44,14 @@
 				'homepage-block-3'   : '#homepage_block_3-desktop',
 				'ros_column-block'   : '#column_block-desktop',
 				'ros_leaderboard'    : '#leaderboard-bottom',
-				'ros_button'         : '#button'
+				'ros_button-1'       : '#button_1'
 				
 			},
 			
 			ros : {
 				
-				'custom-1'    : '#custom_1',
-				'half-banner' : '#half_banner'
+				'custom-1' : '#custom_1',
+				'button-2' : '#button_2'
 				
 			}
 			
@@ -69,7 +69,7 @@
 				
 				// Add '&cache=busted' to the end of the uri for testing newly added ads
 				
-				var uri = settings.api + (settings.parent ? settings.parent + ':' : '') + settings.section + '/' + (settings.page ? settings.page + '/' : '') + '?callback=?';
+				var uri = settings.api + (settings.parent ? settings.parent + ':' : '') + settings.section + '/' + (settings.page ? settings.page + '/' : '') + '?callback=?&cache=busted';
 				
 				if ($.jsonp) {
 					
@@ -192,7 +192,7 @@
 				
 				// ROS:
 				
-				ad_unit = ((flag === 1) && ((value.ad_type[0].slug === 'custom-1') || (value.ad_type[0].slug === 'half-banner'))) ? $(settings.units.ros[value.ad_type[0].slug]) : $(settings.units[breakpoint]['ros_' + value.ad_type[0].slug]);
+				ad_unit = ((flag === 1) && ((value.ad_type[0].slug === 'custom-1') || (value.ad_type[0].slug === 'button-2'))) ? $(settings.units.ros[value.ad_type[0].slug]) : $(settings.units[breakpoint]['ros_' + value.ad_type[0].slug]);
 				
 			} else {
 				

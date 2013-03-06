@@ -322,7 +322,7 @@
 		if (elem) {
 			
 			// return (IE browser?) ? (Return IE fontFamily) : ((W3C browser?) ? (Return W3C font-family) : Return empty string);
-			return (elem.currentStyle) ? elem.currentStyle['fontFamily'] : ((window.getComputedStyle) ? window.getComputedStyle(elem).getPropertyValue('font-family') : '');
+			return (elem.currentStyle) ? elem.currentStyle['fontFamily'] : ((window.getComputedStyle) ? window.getComputedStyle(el).getPropertyValue('font-family') : '');
 			
 		}
 		
