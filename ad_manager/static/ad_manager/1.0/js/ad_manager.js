@@ -69,7 +69,7 @@
 				
 				// Add '&cache=busted' to the end of the uri for testing newly added ads
 				
-				var uri = settings.api + (settings.parent ? settings.parent + ':' : '') + settings.section + '/' + (settings.page ? settings.page + '/' : '') + '?callback=?&cache=busted';
+				var uri = settings.api + (settings.parent ? settings.parent + ':' : '') + settings.section + '/' + (settings.page ? settings.page + '/' : '') + '?callback=?';
 				
 				if ($.jsonp) {
 					
