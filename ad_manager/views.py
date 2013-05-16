@@ -233,7 +233,7 @@ class Api(JSONResponseMixin, BaseDetailView):
                 'ad_group': [
                     {
                         'aug_id': ad_group.aug_id,
-                        'page_type': getattr(ad_group.aug_id, 'name', ''),
+                        'page_type': getattr(ad_group.page_type, 'name', ''),
                         'ad': [
                             {
                                 'id': ad.ad_id,
