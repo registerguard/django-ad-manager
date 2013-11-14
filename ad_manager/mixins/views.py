@@ -27,7 +27,7 @@ class JSONResponseMixin(object):
     cache_exists = False
     
     # How long to cache?
-    cache_timeout = 43200 # 12 hours.
+    cache_timeout = 3600 # 1 hour (in seconds).
     
     # Unique cache key string:
     cache_key = None
